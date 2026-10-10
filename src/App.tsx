@@ -3647,7 +3647,7 @@ function AdminDashboard({ onLogout }: { onLogout: () => void }) {
       tone: "orange",
     },
     {
-      name: "Committee Performance (Scoring Panitia)",
+      name: "Steering Committee Performance",
       note: "All 37 committee members evaluated across 5 divisions",
       tone: "green",
     },

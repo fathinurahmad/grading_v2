@@ -816,7 +816,7 @@ export async function exportStudentMasterDataReport() {
 // Master dispatcher
 export async function downloadExcelReport(reportName: string) {
   const norm = reportName.toLowerCase()
-  if (norm.includes("performance") || norm.includes("scoring panitia") || norm.includes("division")) {
+  if (norm.includes("performance") || norm.includes("steering") || norm.includes("scoring panitia") || norm.includes("division")) {
     await exportCommitteeScoringReport()
   } else if (norm.includes("lecturer") || norm.includes("dosen")) {
     await exportLecturerScoringReport()
