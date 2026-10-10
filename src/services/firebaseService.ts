@@ -26,6 +26,12 @@ export interface FirebaseStudent {
   note: string
   dosenNote?: string
   panitiaNote?: string
+  subjectNotes?: {
+    Business?: string
+    English?: string
+    Entrepreneurship?: string
+    [key: string]: string | undefined
+  }
   scores: {
     Business: number
     English: number
@@ -189,16 +195,18 @@ export async function submitLecturerScoresInFirestore(
       const batch = writeBatch(db)
       for (const [studentId, newScore] of chunk) {
         const studentRef = doc(db, "students", studentId)
-        batch.set(
-          studentRef,
-          {
-            scores: {
-              [subject]: newScore,
-            },
-            ...(note ? { dosenNote: note } : {}),
+        const updatePayload: Record<string, any> = {
+          scores: {
+            [subject]: newScore,
           },
-          { merge: true }
-        )
+        }
+        if (note !== undefined) {
+          updatePayload.dosenNote = note
+          updatePayload.subjectNotes = {
+            [subject]: note,
+          }
+        }
+        batch.set(studentRef, updatePayload, { merge: true })
       }
       await batch.commit()
     }
@@ -706,6 +714,11 @@ export async function resetAllSystemDataInFirestore() {
               note: "No reductions",
               panitiaNote: "No reductions",
               dosenNote: "",
+              subjectNotes: {
+                Business: "",
+                English: "",
+                Entrepreneurship: "",
+              },
               scores: {
                 Business: 0,
                 English: 0,

@@ -1106,6 +1106,12 @@ interface MasterStudent {
   note: string
   dosenNote?: string
   panitiaNote?: string
+  subjectNotes?: {
+    Business?: string
+    English?: string
+    Entrepreneurship?: string
+    [key: string]: string | undefined
+  }
   scores: {
     Business: number
     English: number
@@ -1167,6 +1173,24 @@ function DosenDashboard({ onLogout }: { onLogout: () => void }) {
       ),
     [allStudents, className, group],
   )
+
+  // Automatically load existing evaluation note for the selected subject and group
+  useEffect(() => {
+    if (!subject || !currentStudents.length) {
+      setNote("")
+      return
+    }
+    // Find note specific to this subject for students in this group
+    const firstWithSubjectNote = currentStudents.find(
+      (s) => s.subjectNotes && s.subjectNotes[subject] !== undefined && s.subjectNotes[subject] !== ""
+    )
+    if (firstWithSubjectNote && firstWithSubjectNote.subjectNotes?.[subject]) {
+      setNote(firstWithSubjectNote.subjectNotes[subject] || "")
+    } else {
+      setNote("")
+    }
+  }, [subject, className, group, allStudents])
+
   const updated = Object.keys(scores).length
 
   const submitScores = async () => {
@@ -1340,12 +1364,12 @@ function DosenDashboard({ onLogout }: { onLogout: () => void }) {
                 <Icon name="edit" />
               </div>
               <div className="notes-copy">
-                <Heading level={3}>Group Evaluation</Heading>
-                <p>This note applies to the whole group.</p>
+                <Heading level={3}>Group Evaluation ({subject})</Heading>
+                <p>This note applies specifically to {subject} for {className} - {group}.</p>
               </div>
               {createElement("textarea", {
                 className: "textarea",
-                placeholder: locked ? "Scoring is currently locked by Administrator..." : "Write evaluation notes about this group...",
+                placeholder: locked ? "Scoring is currently locked by Administrator..." : `Write evaluation notes for ${subject} (${className} - ${group})...`,
                 value: note,
                 disabled: locked,
                 onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) =>

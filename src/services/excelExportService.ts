@@ -195,13 +195,15 @@ export async function exportLecturerScoringReport() {
     "Student Full Name",
     "Class",
     "Group",
-    "Business",
-    "English",
-    "Entrepreneurship",
+    "Business Score",
+    "Business Note",
+    "English Score",
+    "English Note",
+    "Entrepreneurship Score",
+    "Entrepreneurship Note",
     "Average",
     "Grade",
     "Status",
-    "Group Evaluation Note",
   ]
 
   const rows = students.map((s, idx) => {
@@ -212,6 +214,10 @@ export async function exportLecturerScoringReport() {
     const avg = total > 0 ? Math.round((total / 3) * 10) / 10 : 0
     const hasScores = b > 0 || e > 0 || ent > 0
 
+    const noteBus = s.subjectNotes?.Business || (s.dosenNote && b > 0 ? s.dosenNote : "—")
+    const noteEng = s.subjectNotes?.English || (s.dosenNote && e > 0 ? s.dosenNote : "—")
+    const noteEnt = s.subjectNotes?.Entrepreneurship || (s.dosenNote && ent > 0 ? s.dosenNote : "—")
+
     return [
       idx + 1,
       s.id,
@@ -219,12 +225,14 @@ export async function exportLecturerScoringReport() {
       s.class,
       s.group,
       b,
+      noteBus,
       e,
+      noteEng,
       ent,
+      noteEnt,
       avg,
       hasScores ? getGrade(avg) : "Pending",
       hasScores ? "Graded" : "Not Graded Yet",
-      s.dosenNote || s.note || "No specific note",
     ]
   })
 
@@ -234,8 +242,8 @@ export async function exportLecturerScoringReport() {
     `Lecturer Academic Scoring Report · Generated: ${nowStr} · Total Students: ${students.length}`,
     headers,
     rows,
-    [6, 14, 34, 12, 12, 14, 14, 18, 14, 12, 16, 32],
-    [2, 11] // Name and Note left aligned
+    [6, 14, 34, 12, 12, 14, 28, 14, 28, 20, 28, 14, 12, 16],
+    [2, 6, 8, 10] // Name and Notes left aligned
   )
 
   const wb = XLSX.utils.book_new()
@@ -754,27 +762,40 @@ export async function exportStudentMasterDataReport() {
     "Group",
     "Discipline Score",
     "Discipline Status",
-    "Business",
-    "English",
-    "Entrepreneurship",
+    "Business Score",
+    "Business Note",
+    "English Score",
+    "English Note",
+    "Entrepreneurship Score",
+    "Entrepreneurship Note",
     "Committee Discipline Note",
-    "Lecturer Academic Note",
   ]
 
-  const rows = students.map((s, idx) => [
-    idx + 1,
-    s.id,
-    s.name,
-    s.class,
-    s.group,
-    s.score ?? 100,
-    getDisciplineStatus(s.score ?? 100),
-    s.scores?.Business ?? 0,
-    s.scores?.English ?? 0,
-    s.scores?.Entrepreneurship ?? 0,
-    s.panitiaNote || s.note || "No reductions",
-    s.dosenNote || "—",
-  ])
+  const rows = students.map((s, idx) => {
+    const b = s.scores?.Business ?? 0
+    const e = s.scores?.English ?? 0
+    const ent = s.scores?.Entrepreneurship ?? 0
+    const noteBus = s.subjectNotes?.Business || (s.dosenNote && b > 0 ? s.dosenNote : "—")
+    const noteEng = s.subjectNotes?.English || (s.dosenNote && e > 0 ? s.dosenNote : "—")
+    const noteEnt = s.subjectNotes?.Entrepreneurship || (s.dosenNote && ent > 0 ? s.dosenNote : "—")
+
+    return [
+      idx + 1,
+      s.id,
+      s.name,
+      s.class,
+      s.group,
+      s.score ?? 100,
+      getDisciplineStatus(s.score ?? 100),
+      b,
+      noteBus,
+      e,
+      noteEng,
+      ent,
+      noteEnt,
+      s.panitiaNote || s.note || "No reductions",
+    ]
+  })
 
   const nowStr = new Date().toLocaleString()
   const ws = createStyledSheet(
@@ -782,8 +803,8 @@ export async function exportStudentMasterDataReport() {
     `Student Master Profile & Directory · Generated: ${nowStr} · Total Students: ${students.length}`,
     headers,
     rows,
-    [6, 14, 34, 12, 12, 18, 24, 12, 12, 18, 30, 30],
-    [2, 10, 11]
+    [6, 14, 34, 12, 12, 18, 24, 14, 26, 14, 26, 20, 26, 30],
+    [2, 8, 10, 12, 13]
   )
 
   const wb = XLSX.utils.book_new()
