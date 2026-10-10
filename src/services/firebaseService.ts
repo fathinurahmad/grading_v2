@@ -821,7 +821,7 @@ export function getUserProfileFromEmail(email: string): AppUser | null {
         username: "admin",
         email: "admin.kampus@gmail.com",
         role: "admin",
-        name: "Nadia Aulia",
+        name: "User",
         roleTitle: "System Administrator",
       }
     case "dosen":
@@ -830,8 +830,8 @@ export function getUserProfileFromEmail(email: string): AppUser | null {
         username: "dosen",
         email: "dosen.kampus@gmail.com",
         role: "dosen",
-        name: "Maya Putri, M.Pd.",
-        roleTitle: "Lead Academic Lecturer",
+        name: "User",
+        roleTitle: "Academic Lecturer",
       }
     case "panitia":
       return {
@@ -839,8 +839,8 @@ export function getUserProfileFromEmail(email: string): AppUser | null {
         username: "panitia",
         email: "panitia.kampus@gmail.com",
         role: "panitia",
-        name: "Panitia Pelaksana",
-        roleTitle: "Panitia Kedisiplinan Mahasiswa",
+        name: "User",
+        roleTitle: "Discipline Committee",
       }
     case "scoring":
       return {
@@ -848,8 +848,8 @@ export function getUserProfileFromEmail(email: string): AppUser | null {
         username: "steering",
         email: "steering.kampus@gmail.com",
         role: "scoring",
-        name: "Steering Committee (SC)",
-        roleTitle: "Steering Committee / Evaluator Kinerja Panitia",
+        name: "User",
+        roleTitle: "Steering Committee",
       }
   }
 }

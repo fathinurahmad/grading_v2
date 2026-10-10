@@ -589,9 +589,9 @@ function ProfilePage({
 }) {
   const guideData = {
     dosen: {
-      eyebrow: "PANDUAN PENGGUNAAN · DOSEN",
-      title: "Panduan Penggunaan Halaman Dosen",
-      subtitle: "Petunjuk alur kerja penginputan nilai akademik mahasiswa, filter kelas, dan ekspor laporan Excel.",
+      eyebrow: "USER GUIDE · LECTURER",
+      title: "Lecturer Workspace Guide",
+      subtitle: "Step-by-step workflow for academic scoring, class filtering, and Excel report export.",
       steps: [
         {
           num: "01",
@@ -619,15 +619,15 @@ function ProfilePage({
         },
       ],
       highlights: [
-        { label: "Batas Waktu Pengisian", desc: "Pastikan penginputan nilai selesai sebelum sistem dikunci oleh Administrator." },
-        { label: "Perhitungan Otomatis", desc: "Rata-rata 3 mata kuliah dan grade (A/B/C/D/E) dihitung otomatis oleh sistem." },
-        { label: "Validasi Real-Time", desc: "Sistem mencegah duplikasi dan mencatat status penilaian setiap mahasiswa secara instan." },
+        { label: "Submission Deadline", desc: "Ensure all score submissions are completed before the system is locked by Administrator." },
+        { label: "Automated Calculation", desc: "Average across 3 subjects and letter grades (A/B/C/D/E) are automatically calculated by the system." },
+        { label: "Real-Time Validation", desc: "The platform prevents duplicate submissions and instantly synchronizes student scoring status." },
       ],
     },
     panitia: {
-      eyebrow: "PANDUAN PENGGUNAAN · PANITIA",
-      title: "Panduan Penggunaan Halaman Panitia",
-      subtitle: "Petunjuk evaluasi kedisiplinan, pemantauan status pelanggaran, dan pencatatan pengurangan poin mahasiswa.",
+      eyebrow: "USER GUIDE · COMMITTEE",
+      title: "Committee Workspace Guide",
+      subtitle: "Step-by-step workflow for student discipline evaluation, violation tracking, and point deductions.",
       steps: [
         {
           num: "01",
@@ -655,15 +655,15 @@ function ProfilePage({
         },
       ],
       highlights: [
-        { label: "Poin Awal Mahasiswa", desc: "Setiap mahasiswa memulai kegiatan dengan modal kedisiplinan sempurna 100 poin." },
-        { label: "Buku Catatan Digital", desc: "Riwayat potongan poin tercatat transparan dan tidak dapat dihapus sembarangan." },
-        { label: "Sinkronisasi Live", desc: "Perubahan poin langsung terpantau oleh Steering Committee dan Admin secara bersamaan." },
+        { label: "Initial Student Points", desc: "Every student begins the camp with a perfect baseline score of 100 discipline points." },
+        { label: "Digital Audit Log", desc: "Point deduction records are transparently logged and cannot be removed arbitrarily." },
+        { label: "Live Synchronization", desc: "Discipline point updates are instantly visible to the Steering Committee and Administrator." },
       ],
     },
     scoring: {
-      eyebrow: "PANDUAN PENGGUNAAN · STEERING COMMITTEE",
-      title: "Panduan Penggunaan Halaman Steering Committee",
-      subtitle: "Petunjuk evaluasi performa dan penilaian kinerja divisi panitia pelaksana English Camp 2026.",
+      eyebrow: "USER GUIDE · STEERING COMMITTEE",
+      title: "Steering Committee Guide",
+      subtitle: "Performance review guidelines and committee division contribution evaluation for English Camp 2026.",
       steps: [
         {
           num: "01",
@@ -691,15 +691,15 @@ function ProfilePage({
         },
       ],
       highlights: [
-        { label: "Objektivitas Penilaian", desc: "Evaluasi SC menjadi acuan sertifikasi dan apresiasi divisi kepanitiaan terbaik." },
-        { label: "Tingkat Performa", desc: "Skor dikelompokkan ke kategori: Outstanding, Excellent, Satisfactory, dan Needs Improvement." },
-        { label: "Live Cloud Backup", desc: "Hasil evaluasi tersimpan aman di cloud Firestore tanpa risiko kehilangan data." },
+        { label: "Objective Evaluation", desc: "Steering Committee evaluations serve as the official benchmark for committee certification." },
+        { label: "Performance Tiers", desc: "Scores are grouped into categories: Outstanding, Excellent, Satisfactory, and Needs Improvement." },
+        { label: "Live Cloud Backup", desc: "All evaluation records are securely backed up in Firebase Firestore without risk of data loss." },
       ],
     },
     admin: {
-      eyebrow: "PANDUAN PENGGUNAAN · ADMIN",
-      title: "Panduan Penggunaan Halaman Admin",
-      subtitle: "Petunjuk pengelolaan master data mahasiswa, unduhan laporan Excel, kontrol kunci sistem, dan pemeliharaan.",
+      eyebrow: "USER GUIDE · ADMINISTRATOR",
+      title: "Administrator Workspace Guide",
+      subtitle: "Management instructions for student master data, Excel report downloads, system lock control, and maintenance.",
       steps: [
         {
           num: "01",
@@ -727,9 +727,9 @@ function ProfilePage({
         },
       ],
       highlights: [
-        { label: "Kontrol Penuh", desc: "Admin memiliki kewenangan tertinggi mengatur kunci sistem dan master data peserta." },
-        { label: "Integritas Data", desc: "Semua operasi reset dan pembaruan data dilindungi oleh aturan keamanan database." },
-        { label: "Pusat Rekapitulasi", desc: "Semua rekapitulasi nilai dan umpan balik kepuasan terkumpul di dashboard Admin." },
+        { label: "Full System Control", desc: "Administrator holds top-level authority to manage scoring system locks and participant data." },
+        { label: "Data Integrity", desc: "All system reset and data modifications are secured by database permission rules." },
+        { label: "Centralized Reports", desc: "All academic scores, discipline audits, and participant satisfaction feedback aggregate here." },
       ],
     },
   }[role]
@@ -747,7 +747,7 @@ function ProfilePage({
       {/* 1. Step by step usage guide */}
       <section className="guide-section">
         <h3 className="guide-section-title">
-          <Icon name="book" size={17} /> Alur Langkah Penggunaan
+          <Icon name="book" size={17} /> Step-by-Step Workflow
         </h3>
         <div className="guide-steps-grid">
           {guideData.steps.map((st) => (
@@ -780,7 +780,7 @@ function ProfilePage({
         <div className="profile-logout-copy">
           <h3>Session Management</h3>
           <p>
-            Selesai menggunakan sistem? Keluar dengan aman untuk menjaga kerahasiaan data dan rekaman evaluasi mahasiswa.
+            Finished using the system? Sign out securely to protect data privacy and student evaluation records.
           </p>
         </div>
         <Button
@@ -788,7 +788,7 @@ function ProfilePage({
           icon="logout"
           onClick={onLogout}
         >
-          Keluar dari Sistem (Log Out)
+          Sign Out of System (Log Out)
         </Button>
       </section>
     </main>
@@ -861,23 +861,11 @@ function AppShell({
           onClick={() => setCurrentTab("Panduan")}
         >
           <Avatar
-            name={
-              role === "dosen"
-                ? "Maya Putri"
-                : role === "panitia" || role === "scoring"
-                  ? "Raka Pratama"
-                  : "Nadia Aulia"
-            }
+            name="User"
             purple={role === "panitia" || role === "scoring"}
           />
           <div>
-            <strong>
-              {role === "dosen"
-                ? "Maya Putri"
-                : role === "panitia" || role === "scoring"
-                  ? "Raka Pratama"
-                  : "Nadia Aulia"}
-            </strong>
+            <strong>User</strong>
             <span>{meta.label}</span>
           </div>
           <Button
@@ -897,7 +885,7 @@ function AppShell({
             <Brand compact />
           </div>
           <div className="desktop-title">
-            <span>{currentTab === "Panduan" ? `Panduan · ${meta.label}` : meta.label}</span>
+            <span>{currentTab === "Panduan" ? `Guide · ${meta.label}` : meta.label}</span>
           </div>
           <div className="top-actions">
             {installPrompt && !installed && (
@@ -1203,7 +1191,7 @@ function DosenDashboard({ onLogout }: { onLogout: () => void }) {
       <main className="content">
         <section className="welcome-row">
           <div>
-            <p className="eyebrow">Good morning, Maya</p>
+            <p className="eyebrow">Welcome, User</p>
             <Heading level={1}>Lecturer Dashboard</Heading>
             <p>Manage your student scores.</p>
           </div>
@@ -1667,7 +1655,7 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
       <main className="content">
         <section className="welcome-row committee-welcome">
           <div>
-            <p className="eyebrow">Good morning, Raka</p>
+            <p className="eyebrow">Welcome, User</p>
             <Heading level={1}>Student Score Evaluation</Heading>
             <p>Review scores with clarity and accountability.</p>
           </div>
@@ -2376,7 +2364,7 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
       <main className="content">
         <section className="welcome-row committee-welcome">
           <div>
-            <p className="eyebrow">Evaluator Portal</p>
+            <p className="eyebrow">Welcome, User</p>
             <Heading level={1}>Steering Committee</Heading>
             <p>Evaluate committee performance and divisional contributions.</p>
           </div>
@@ -3651,7 +3639,7 @@ function AdminDashboard({ onLogout }: { onLogout: () => void }) {
       <main className="content admin-mobile-content">
         <section className="welcome-row">
           <div>
-            <p className="eyebrow">Good morning, Nadia</p>
+            <p className="eyebrow">Welcome, User</p>
             <Heading level={1}>Camp Control Center</Heading>
             <p>Manage students, system access, and all scoring exports.</p>
           </div>
