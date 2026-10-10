@@ -1,0 +1,1396 @@
+{
+  "students": [
+    {
+      "id": "a_001",
+      "nama": "SALSA BILA IRSYA FITRI",
+      "kelas": "A",
+      "kelompok": 1
+    },
+    {
+      "id": "a_002",
+      "nama": "REZKI AMANDA",
+      "kelas": "A",
+      "kelompok": 1
+    },
+    {
+      "id": "a_003",
+      "nama": "NURATIKA RASYID",
+      "kelas": "A",
+      "kelompok": 1
+    },
+    {
+      "id": "a_004",
+      "nama": "IRSA",
+      "kelas": "A",
+      "kelompok": 1
+    },
+    {
+      "id": "a_005",
+      "nama": "ZAL ZA BILA",
+      "kelas": "A",
+      "kelompok": 1
+    },
+    {
+      "id": "a_006",
+      "nama": "MUSLAENI AMIRUDDIN",
+      "kelas": "A",
+      "kelompok": 2
+    },
+    {
+      "id": "a_007",
+      "nama": "KAMILA NAURA ASILA",
+      "kelas": "A",
+      "kelompok": 2
+    },
+    {
+      "id": "a_008",
+      "nama": "PUTRA MAHKOTA",
+      "kelas": "A",
+      "kelompok": 2
+    },
+    {
+      "id": "a_009",
+      "nama": "ZALZA FATIMAH SAHRA RAMADHANI",
+      "kelas": "A",
+      "kelompok": 2
+    },
+    {
+      "id": "a_010",
+      "nama": "FIRQATUL MUQARRAMA",
+      "kelas": "A",
+      "kelompok": 3
+    },
+    {
+      "id": "a_011",
+      "nama": "ANDHIKA SYAHRUL PRASETIAWAN SYAM",
+      "kelas": "A",
+      "kelompok": 3
+    },
+    {
+      "id": "a_012",
+      "nama": "AISYAH AZ ZAHRA",
+      "kelas": "A",
+      "kelompok": 3
+    },
+    {
+      "id": "a_013",
+      "nama": "ZAKIA NISWA",
+      "kelas": "A",
+      "kelompok": 3
+    },
+    {
+      "id": "a_014",
+      "nama": "MAWARSENJIKA",
+      "kelas": "A",
+      "kelompok": 4
+    },
+    {
+      "id": "a_015",
+      "nama": "ALMIRA SITI HAJAR",
+      "kelas": "A",
+      "kelompok": 4
+    },
+    {
+      "id": "a_016",
+      "nama": "ERINA NIKEISHA",
+      "kelas": "A",
+      "kelompok": 4
+    },
+    {
+      "id": "a_017",
+      "nama": "AZIRAH ASRIADI DAHLAN",
+      "kelas": "A",
+      "kelompok": 4
+    },
+    {
+      "id": "a_018",
+      "nama": "JIHAN FADHILLAH MASKUR",
+      "kelas": "A",
+      "kelompok": 5
+    },
+    {
+      "id": "a_019",
+      "nama": "SULFIYANI",
+      "kelas": "A",
+      "kelompok": 5
+    },
+    {
+      "id": "a_020",
+      "nama": "NURASISAH",
+      "kelas": "A",
+      "kelompok": 5
+    },
+    {
+      "id": "a_021",
+      "nama": "HERUCOKRO WICAKSONO",
+      "kelas": "A",
+      "kelompok": 5
+    },
+    {
+      "id": "a_022",
+      "nama": "FADIAH ASKYAHRA RAMADHAN",
+      "kelas": "A",
+      "kelompok": 6
+    },
+    {
+      "id": "a_023",
+      "nama": "NADYA AKMA AFIQA",
+      "kelas": "A",
+      "kelompok": 6
+    },
+    {
+      "id": "a_024",
+      "nama": "SITI NUR AZIZAH",
+      "kelas": "A",
+      "kelompok": 6
+    },
+    {
+      "id": "a_025",
+      "nama": "FIKRIATUK MUSTAKNI",
+      "kelas": "A",
+      "kelompok": 6
+    },
+    {
+      "id": "b_001",
+      "nama": "NUR AULIA RUSTAN",
+      "kelas": "B",
+      "kelompok": 1
+    },
+    {
+      "id": "b_002",
+      "nama": "ANDI ALIFIAH L TASYAM",
+      "kelas": "B",
+      "kelompok": 1
+    },
+    {
+      "id": "b_003",
+      "nama": "SITI NUR DZAKIYYAH",
+      "kelas": "B",
+      "kelompok": 1
+    },
+    {
+      "id": "b_004",
+      "nama": "REGINA",
+      "kelas": "B",
+      "kelompok": 1
+    },
+    {
+      "id": "b_005",
+      "nama": "HARY MUHAYYAT",
+      "kelas": "B",
+      "kelompok": 1
+    },
+    {
+      "id": "b_006",
+      "nama": "M. ANUGRAH",
+      "kelas": "B",
+      "kelompok": 1
+    },
+    {
+      "id": "b_007",
+      "nama": "NUR ANUGRAH ANDINI",
+      "kelas": "B",
+      "kelompok": 1
+    },
+    {
+      "id": "b_008",
+      "nama": "MUTIARA",
+      "kelas": "B",
+      "kelompok": 2
+    },
+    {
+      "id": "b_009",
+      "nama": "AZIZA LUTFHI",
+      "kelas": "B",
+      "kelompok": 2
+    },
+    {
+      "id": "b_010",
+      "nama": "GRACELIA INRI",
+      "kelas": "B",
+      "kelompok": 2
+    },
+    {
+      "id": "b_011",
+      "nama": "ANISAH HUDANI",
+      "kelas": "B",
+      "kelompok": 2
+    },
+    {
+      "id": "b_012",
+      "nama": "KEZIA PUTRI",
+      "kelas": "B",
+      "kelompok": 2
+    },
+    {
+      "id": "b_013",
+      "nama": "WENNI AURA",
+      "kelas": "B",
+      "kelompok": 2
+    },
+    {
+      "id": "b_014",
+      "nama": "NURFAHMI SAKINA",
+      "kelas": "B",
+      "kelompok": 2
+    },
+    {
+      "id": "b_015",
+      "nama": "SANATANG",
+      "kelas": "B",
+      "kelompok": 3
+    },
+    {
+      "id": "b_016",
+      "nama": "JUSRIANI",
+      "kelas": "B",
+      "kelompok": 3
+    },
+    {
+      "id": "b_017",
+      "nama": "ANISAH NURAINI",
+      "kelas": "B",
+      "kelompok": 3
+    },
+    {
+      "id": "b_018",
+      "nama": "ALIFIYYAH KHALILAH",
+      "kelas": "B",
+      "kelompok": 3
+    },
+    {
+      "id": "b_019",
+      "nama": "KAFKA",
+      "kelas": "B",
+      "kelompok": 3
+    },
+    {
+      "id": "b_020",
+      "nama": "AINUN MARDHIYANI",
+      "kelas": "B",
+      "kelompok": 3
+    },
+    {
+      "id": "b_021",
+      "nama": "DIAN PUSPITA",
+      "kelas": "B",
+      "kelompok": 3
+    },
+    {
+      "id": "b_022",
+      "nama": "WAHYUNI DWI",
+      "kelas": "B",
+      "kelompok": 4
+    },
+    {
+      "id": "b_023",
+      "nama": "YOLDA PUTRI",
+      "kelas": "B",
+      "kelompok": 4
+    },
+    {
+      "id": "b_024",
+      "nama": "MARIKO",
+      "kelas": "B",
+      "kelompok": 4
+    },
+    {
+      "id": "b_025",
+      "nama": "NADIA",
+      "kelas": "B",
+      "kelompok": 4
+    },
+    {
+      "id": "b_026",
+      "nama": "SITI FATIMAH",
+      "kelas": "B",
+      "kelompok": 4
+    },
+    {
+      "id": "b_027",
+      "nama": "LISA AYNUN S.",
+      "kelas": "B",
+      "kelompok": 4
+    },
+    {
+      "id": "b_028",
+      "nama": "NASHWA CEYDA",
+      "kelas": "B",
+      "kelompok": 4
+    },
+    {
+      "id": "b_029",
+      "nama": "MUFLIH MUHLIS",
+      "kelas": "B",
+      "kelompok": 5
+    },
+    {
+      "id": "b_030",
+      "nama": "YOGI CANDRA",
+      "kelas": "B",
+      "kelompok": 5
+    },
+    {
+      "id": "b_031",
+      "nama": "KEISYA NAJWA",
+      "kelas": "B",
+      "kelompok": 5
+    },
+    {
+      "id": "b_032",
+      "nama": "DINALORENSA",
+      "kelas": "B",
+      "kelompok": 5
+    },
+    {
+      "id": "b_033",
+      "nama": "AYU FAKHIRA",
+      "kelas": "B",
+      "kelompok": 5
+    },
+    {
+      "id": "b_034",
+      "nama": "NUR FADZLYZA",
+      "kelas": "B",
+      "kelompok": 5
+    },
+    {
+      "id": "b_035",
+      "nama": "HANIFAH NUR AZIZAH",
+      "kelas": "B",
+      "kelompok": 5
+    },
+    {
+      "id": "b_036",
+      "nama": "NUR AINUN",
+      "kelas": "B",
+      "kelompok": 6
+    },
+    {
+      "id": "b_037",
+      "nama": "ZERANI",
+      "kelas": "B",
+      "kelompok": 6
+    },
+    {
+      "id": "b_038",
+      "nama": "MUH CHOLLED",
+      "kelas": "B",
+      "kelompok": 6
+    },
+    {
+      "id": "b_039",
+      "nama": "ARIL",
+      "kelas": "B",
+      "kelompok": 6
+    },
+    {
+      "id": "b_040",
+      "nama": "FIANTIKA",
+      "kelas": "B",
+      "kelompok": 6
+    },
+    {
+      "id": "b_041",
+      "nama": "SHELA RAMADHANI",
+      "kelas": "B",
+      "kelompok": 6
+    },
+    {
+      "id": "b_042",
+      "nama": "ARIQAH SALSABILA",
+      "kelas": "B",
+      "kelompok": 6
+    },
+    {
+      "id": "c_001",
+      "nama": "M. ISRA HARSYA",
+      "kelas": "C",
+      "kelompok": 1
+    },
+    {
+      "id": "c_002",
+      "nama": "SUCI RAMADANI",
+      "kelas": "C",
+      "kelompok": 1
+    },
+    {
+      "id": "c_003",
+      "nama": "NINDI SRIWIJAYA",
+      "kelas": "C",
+      "kelompok": 1
+    },
+    {
+      "id": "c_004",
+      "nama": "ALL BRILLIANT RAENY FADMANI",
+      "kelas": "C",
+      "kelompok": 1
+    },
+    {
+      "id": "c_005",
+      "nama": "NAZWA KIRANTI KAISUPY",
+      "kelas": "C",
+      "kelompok": 1
+    },
+    {
+      "id": "c_006",
+      "nama": "RATU BULQIS ARTAMEVIA",
+      "kelas": "C",
+      "kelompok": 1
+    },
+    {
+      "id": "c_007",
+      "nama": "NUR TALBIA HAMRUL",
+      "kelas": "C",
+      "kelompok": 1
+    },
+    {
+      "id": "c_008",
+      "nama": "ST MUTIA RAMADHANI",
+      "kelas": "C",
+      "kelompok": 2
+    },
+    {
+      "id": "c_009",
+      "nama": "NUR FITRIAH",
+      "kelas": "C",
+      "kelompok": 2
+    },
+    {
+      "id": "c_010",
+      "nama": "ZAYYANAH DZATIL IZZAH RAMADHANI MAULANA",
+      "kelas": "C",
+      "kelompok": 2
+    },
+    {
+      "id": "c_011",
+      "nama": "FATIMAH ZAHRA",
+      "kelas": "C",
+      "kelompok": 2
+    },
+    {
+      "id": "c_012",
+      "nama": "RISKA AYU SAFITRI",
+      "kelas": "C",
+      "kelompok": 2
+    },
+    {
+      "id": "c_013",
+      "nama": "AHMAD GAZALI NUR HASAN",
+      "kelas": "C",
+      "kelompok": 2
+    },
+    {
+      "id": "c_014",
+      "nama": "ANGELICA C TOISUTA",
+      "kelas": "C",
+      "kelompok": 2
+    },
+    {
+      "id": "c_015",
+      "nama": "A. NAYLA ZAHRATUSSITA",
+      "kelas": "C",
+      "kelompok": 3
+    },
+    {
+      "id": "c_016",
+      "nama": "RIDZAH AQSHA AULIA IRWAN",
+      "kelas": "C",
+      "kelompok": 3
+    },
+    {
+      "id": "c_017",
+      "nama": "ALYA AIRA SEPTIASA",
+      "kelas": "C",
+      "kelompok": 3
+    },
+    {
+      "id": "c_018",
+      "nama": "INDA PUTRI DAMAYANTI",
+      "kelas": "C",
+      "kelompok": 3
+    },
+    {
+      "id": "c_019",
+      "nama": "A'ISYAH 'UDZRI ALFIN",
+      "kelas": "C",
+      "kelompok": 3
+    },
+    {
+      "id": "c_020",
+      "nama": "AHMAD IBRAHIM",
+      "kelas": "C",
+      "kelompok": 3
+    },
+    {
+      "id": "c_021",
+      "nama": "KESYA PABATE",
+      "kelas": "C",
+      "kelompok": 3
+    },
+    {
+      "id": "c_022",
+      "nama": "INCE MOH. CHALIQ ALNUGERAH",
+      "kelas": "C",
+      "kelompok": 4
+    },
+    {
+      "id": "c_023",
+      "nama": "ALISYIAH AURELIA AINANAI HA",
+      "kelas": "C",
+      "kelompok": 4
+    },
+    {
+      "id": "c_024",
+      "nama": "PRISKILA FEBRYANTI",
+      "kelas": "C",
+      "kelompok": 4
+    },
+    {
+      "id": "c_025",
+      "nama": "NADIYAH NUR INAYAH AZIS",
+      "kelas": "C",
+      "kelompok": 4
+    },
+    {
+      "id": "c_026",
+      "nama": "TITA AGUSTINA",
+      "kelas": "C",
+      "kelompok": 4
+    },
+    {
+      "id": "c_027",
+      "nama": "RIYANNI AZZURI",
+      "kelas": "C",
+      "kelompok": 4
+    },
+    {
+      "id": "c_028",
+      "nama": "TIKA RAMADANI",
+      "kelas": "C",
+      "kelompok": 4
+    },
+    {
+      "id": "c_029",
+      "nama": "MUH. RADIL SETIAWAN",
+      "kelas": "C",
+      "kelompok": 5
+    },
+    {
+      "id": "c_030",
+      "nama": "VELDIAN",
+      "kelas": "C",
+      "kelompok": 5
+    },
+    {
+      "id": "c_031",
+      "nama": "RISMAYANTI",
+      "kelas": "C",
+      "kelompok": 5
+    },
+    {
+      "id": "c_032",
+      "nama": "MANTASYAH",
+      "kelas": "C",
+      "kelompok": 5
+    },
+    {
+      "id": "c_033",
+      "nama": "DIQRA ALMAQVIRA A.",
+      "kelas": "C",
+      "kelompok": 5
+    },
+    {
+      "id": "c_034",
+      "nama": "ULPA WIDARTI",
+      "kelas": "C",
+      "kelompok": 5
+    },
+    {
+      "id": "c_035",
+      "nama": "AUREL INDRI KAMALI",
+      "kelas": "C",
+      "kelompok": 5
+    },
+    {
+      "id": "c_036",
+      "nama": "MUHAMMAD TRIANUGRAH",
+      "kelas": "C",
+      "kelompok": 6
+    },
+    {
+      "id": "c_037",
+      "nama": "MUH.CHESSA ALFATIN NASRU",
+      "kelas": "C",
+      "kelompok": 6
+    },
+    {
+      "id": "c_038",
+      "nama": "KHAIRIN SALSABILA",
+      "kelas": "C",
+      "kelompok": 6
+    },
+    {
+      "id": "c_039",
+      "nama": "HANIIFATUL IZZATIL ISMAH",
+      "kelas": "C",
+      "kelompok": 6
+    },
+    {
+      "id": "c_040",
+      "nama": "VIOLA JUNEY",
+      "kelas": "C",
+      "kelompok": 6
+    },
+    {
+      "id": "c_041",
+      "nama": "SHEYLA ENJELIQUI BATARAGOA",
+      "kelas": "C",
+      "kelompok": 6
+    },
+    {
+      "id": "d_001",
+      "nama": "MUH. NOVAL",
+      "kelas": "D",
+      "kelompok": 1
+    },
+    {
+      "id": "d_002",
+      "nama": "MUHAMMAD FAIZ ASLAM",
+      "kelas": "D",
+      "kelompok": 1
+    },
+    {
+      "id": "d_003",
+      "nama": "NUR AZIZAH NASRUDDIN",
+      "kelas": "D",
+      "kelompok": 1
+    },
+    {
+      "id": "d_004",
+      "nama": "USWATUN KHAZANAH",
+      "kelas": "D",
+      "kelompok": 1
+    },
+    {
+      "id": "d_005",
+      "nama": "SITI MUSDALIFAH",
+      "kelas": "D",
+      "kelompok": 1
+    },
+    {
+      "id": "d_006",
+      "nama": "MIFTAHUL JANNAH",
+      "kelas": "D",
+      "kelompok": 1
+    },
+    {
+      "id": "d_007",
+      "nama": "DARMATASYA RENHORAN",
+      "kelas": "D",
+      "kelompok": 1
+    },
+    {
+      "id": "d_008",
+      "nama": "NUR HIFDAH MULIANA",
+      "kelas": "D",
+      "kelompok": 1
+    },
+    {
+      "id": "d_009",
+      "nama": "NUR AISYAH",
+      "kelas": "D",
+      "kelompok": 2
+    },
+    {
+      "id": "d_010",
+      "nama": "MUTIA REZA BAHAR",
+      "kelas": "D",
+      "kelompok": 2
+    },
+    {
+      "id": "d_011",
+      "nama": "ANDI MUH. RIFQI RIFA’AT",
+      "kelas": "D",
+      "kelompok": 2
+    },
+    {
+      "id": "d_012",
+      "nama": "VANNES",
+      "kelas": "D",
+      "kelompok": 2
+    },
+    {
+      "id": "d_013",
+      "nama": "SHAFIQAH REZKY AURELIA",
+      "kelas": "D",
+      "kelompok": 2
+    },
+    {
+      "id": "d_014",
+      "nama": "MERSI AULIA",
+      "kelas": "D",
+      "kelompok": 2
+    },
+    {
+      "id": "d_015",
+      "nama": "AIRA SYHAFIRAH",
+      "kelas": "D",
+      "kelompok": 2
+    },
+    {
+      "id": "d_016",
+      "nama": "NUR ALMIRA HAERANI",
+      "kelas": "D",
+      "kelompok": 2
+    },
+    {
+      "id": "d_017",
+      "nama": "IN'AM FAUZIYYAH DAMRIN",
+      "kelas": "D",
+      "kelompok": 3
+    },
+    {
+      "id": "d_018",
+      "nama": "MARSYA AYU",
+      "kelas": "D",
+      "kelompok": 3
+    },
+    {
+      "id": "d_019",
+      "nama": "HUSNUL HATIMAH",
+      "kelas": "D",
+      "kelompok": 3
+    },
+    {
+      "id": "d_020",
+      "nama": "ALFAJAR RAMADANA PUTRA",
+      "kelas": "D",
+      "kelompok": 3
+    },
+    {
+      "id": "d_021",
+      "nama": "NURUL ANISA",
+      "kelas": "D",
+      "kelompok": 3
+    },
+    {
+      "id": "d_022",
+      "nama": "ADE ARISTON PAKIDING",
+      "kelas": "D",
+      "kelompok": 3
+    },
+    {
+      "id": "d_023",
+      "nama": "A. AFTARI",
+      "kelas": "D",
+      "kelompok": 3
+    },
+    {
+      "id": "d_024",
+      "nama": "PUTRI KIRANA RAMADHANI",
+      "kelas": "D",
+      "kelompok": 4
+    },
+    {
+      "id": "d_025",
+      "nama": "AINUL ATIQA NAJWA",
+      "kelas": "D",
+      "kelompok": 4
+    },
+    {
+      "id": "d_026",
+      "nama": "ZAHIRAH HUSNA MUIS",
+      "kelas": "D",
+      "kelompok": 4
+    },
+    {
+      "id": "d_027",
+      "nama": "SITI JULIANTI PRATIWI",
+      "kelas": "D",
+      "kelompok": 4
+    },
+    {
+      "id": "d_028",
+      "nama": "CINTA",
+      "kelas": "D",
+      "kelompok": 4
+    },
+    {
+      "id": "d_029",
+      "nama": "SALMAN AL FARISY",
+      "kelas": "D",
+      "kelompok": 4
+    },
+    {
+      "id": "d_030",
+      "nama": "ALFIAN FITRA ZUUD",
+      "kelas": "D",
+      "kelompok": 4
+    },
+    {
+      "id": "d_031",
+      "nama": "MUH.AKMAL FATIHUL IHSAN",
+      "kelas": "D",
+      "kelompok": 5
+    },
+    {
+      "id": "d_032",
+      "nama": "AZ ZAHRAIN HAJATUL ARAFAH",
+      "kelas": "D",
+      "kelompok": 5
+    },
+    {
+      "id": "d_033",
+      "nama": "NURUL FADILZA",
+      "kelas": "D",
+      "kelompok": 5
+    },
+    {
+      "id": "d_034",
+      "nama": "NAJWA AZZAHRA",
+      "kelas": "D",
+      "kelompok": 5
+    },
+    {
+      "id": "d_035",
+      "nama": "NUR ALIFKA",
+      "kelas": "D",
+      "kelompok": 5
+    },
+    {
+      "id": "d_036",
+      "nama": "GAVRINA MELINDA PADATU",
+      "kelas": "D",
+      "kelompok": 5
+    },
+    {
+      "id": "d_037",
+      "nama": "MUHAMMD RIZKY AL-BUKHORY",
+      "kelas": "D",
+      "kelompok": 5
+    },
+    {
+      "id": "d_038",
+      "nama": "CHIARA CATHLINIYA HARIS",
+      "kelas": "D",
+      "kelompok": 6
+    },
+    {
+      "id": "d_039",
+      "nama": "NURHIKMA REZKY AWALIYAH",
+      "kelas": "D",
+      "kelompok": 6
+    },
+    {
+      "id": "d_040",
+      "nama": "SALSABILA SHIVA ALYA",
+      "kelas": "D",
+      "kelompok": 6
+    },
+    {
+      "id": "d_041",
+      "nama": "MUSFINA",
+      "kelas": "D",
+      "kelompok": 6
+    },
+    {
+      "id": "d_042",
+      "nama": "AXL CANTONA VIRGIAWAN",
+      "kelas": "D",
+      "kelompok": 6
+    },
+    {
+      "id": "d_043",
+      "nama": "NAFIZAH NURFADIYAH",
+      "kelas": "D",
+      "kelompok": 6
+    },
+    {
+      "id": "e_001",
+      "nama": "MOHD. QAFIZUL HAFIZ",
+      "kelas": "E",
+      "kelompok": 1
+    },
+    {
+      "id": "e_002",
+      "nama": "SILPA ANANDA",
+      "kelas": "E",
+      "kelompok": 1
+    },
+    {
+      "id": "e_003",
+      "nama": "SHATRIYA",
+      "kelas": "E",
+      "kelompok": 1
+    },
+    {
+      "id": "e_004",
+      "nama": "ARINA HIDAYAH.S",
+      "kelas": "E",
+      "kelompok": 1
+    },
+    {
+      "id": "e_005",
+      "nama": "JUMRATUNNISA",
+      "kelas": "E",
+      "kelompok": 1
+    },
+    {
+      "id": "e_006",
+      "nama": "SABRINA",
+      "kelas": "E",
+      "kelompok": 1
+    },
+    {
+      "id": "e_007",
+      "nama": "FANNY NAILA DZIHNI",
+      "kelas": "E",
+      "kelompok": 1
+    },
+    {
+      "id": "e_008",
+      "nama": "ASYRAF AMIR",
+      "kelas": "E",
+      "kelompok": 2
+    },
+    {
+      "id": "e_009",
+      "nama": "IKHWAN NABIL AN-NAQY",
+      "kelas": "E",
+      "kelompok": 2
+    },
+    {
+      "id": "e_010",
+      "nama": "ASMIRANDA",
+      "kelas": "E",
+      "kelompok": 2
+    },
+    {
+      "id": "e_011",
+      "nama": "NISWA ASZAHRA",
+      "kelas": "E",
+      "kelompok": 2
+    },
+    {
+      "id": "e_012",
+      "nama": "PUTERI KEZIA LANTAWA",
+      "kelas": "E",
+      "kelompok": 2
+    },
+    {
+      "id": "e_013",
+      "nama": "FITRIANI",
+      "kelas": "E",
+      "kelompok": 2
+    },
+    {
+      "id": "e_014",
+      "nama": "RUKIA NABIL",
+      "kelas": "E",
+      "kelompok": 2
+    },
+    {
+      "id": "e_015",
+      "nama": "HARTIRTA GANESA BUMI PUTRA",
+      "kelas": "E",
+      "kelompok": 3
+    },
+    {
+      "id": "e_016",
+      "nama": "ULYA AZIZAH SYAHARUDDIN",
+      "kelas": "E",
+      "kelompok": 3
+    },
+    {
+      "id": "e_017",
+      "nama": "DIEN HUSNIYAH",
+      "kelas": "E",
+      "kelompok": 3
+    },
+    {
+      "id": "e_018",
+      "nama": "ANDI ALMAYRA ZAHRAMADHANI",
+      "kelas": "E",
+      "kelompok": 3
+    },
+    {
+      "id": "e_019",
+      "nama": "MULIANA PUTRI",
+      "kelas": "E",
+      "kelompok": 3
+    },
+    {
+      "id": "e_020",
+      "nama": "INDIRA",
+      "kelas": "E",
+      "kelompok": 3
+    },
+    {
+      "id": "e_021",
+      "nama": "WIYANA ARSYTA",
+      "kelas": "E",
+      "kelompok": 3
+    },
+    {
+      "id": "e_022",
+      "nama": "SYERINE NUR AZIZAH",
+      "kelas": "E",
+      "kelompok": 4
+    },
+    {
+      "id": "e_023",
+      "nama": "KEYZA SALSABILA",
+      "kelas": "E",
+      "kelompok": 4
+    },
+    {
+      "id": "e_024",
+      "nama": "RESKIH FAUSIAH",
+      "kelas": "E",
+      "kelompok": 4
+    },
+    {
+      "id": "e_025",
+      "nama": "ANASTASYA PUTRI ADNAN",
+      "kelas": "E",
+      "kelompok": 4
+    },
+    {
+      "id": "e_026",
+      "nama": "MARWAN IFALDO",
+      "kelas": "E",
+      "kelompok": 4
+    },
+    {
+      "id": "e_027",
+      "nama": "ANNISA AL MAGFIRA",
+      "kelas": "E",
+      "kelompok": 4
+    },
+    {
+      "id": "e_028",
+      "nama": "ELIN FATHIYYA NURAHMA",
+      "kelas": "E",
+      "kelompok": 4
+    },
+    {
+      "id": "e_029",
+      "nama": "BILLY DAUGHERTY TIMBA",
+      "kelas": "E",
+      "kelompok": 5
+    },
+    {
+      "id": "e_030",
+      "nama": "NURISKA",
+      "kelas": "E",
+      "kelompok": 5
+    },
+    {
+      "id": "e_031",
+      "nama": "NAJWA KHAERUNNISA",
+      "kelas": "E",
+      "kelompok": 5
+    },
+    {
+      "id": "e_032",
+      "nama": "ISMAWARDANI",
+      "kelas": "E",
+      "kelompok": 5
+    },
+    {
+      "id": "e_033",
+      "nama": "SUTRAEKAPLANI",
+      "kelas": "E",
+      "kelompok": 5
+    },
+    {
+      "id": "e_034",
+      "nama": "IERE THAEDZA MULYADI",
+      "kelas": "E",
+      "kelompok": 5
+    },
+    {
+      "id": "e_035",
+      "nama": "SYAIRE POPPY KONDOLELE",
+      "kelas": "E",
+      "kelompok": 5
+    },
+    {
+      "id": "e_036",
+      "nama": "RISKA NOVITA SYAWALIA",
+      "kelas": "E",
+      "kelompok": 6
+    },
+    {
+      "id": "e_037",
+      "nama": "MISWAH ALIYAH USWATUL KHASANAH",
+      "kelas": "E",
+      "kelompok": 6
+    },
+    {
+      "id": "e_038",
+      "nama": "NURUL NASYWA NASYIFA.S",
+      "kelas": "E",
+      "kelompok": 6
+    },
+    {
+      "id": "e_039",
+      "nama": "ANNISA KHUMAERAH",
+      "kelas": "E",
+      "kelompok": 6
+    },
+    {
+      "id": "e_040",
+      "nama": "WIWI INDASARI",
+      "kelas": "E",
+      "kelompok": 6
+    },
+    {
+      "id": "e_041",
+      "nama": "NUR RAHMA SUCI",
+      "kelas": "E",
+      "kelompok": 6
+    },
+    {
+      "id": "e_042",
+      "nama": "MUH. FATHIR AZHAR",
+      "kelas": "E",
+      "kelompok": 6
+    },
+    {
+      "id": "f_001",
+      "nama": "AMANDA NUR H",
+      "kelas": "F",
+      "kelompok": 1
+    },
+    {
+      "id": "f_002",
+      "nama": "KEISHA SALSABILA",
+      "kelas": "F",
+      "kelompok": 1
+    },
+    {
+      "id": "f_003",
+      "nama": "ROSALINA RINDING",
+      "kelas": "F",
+      "kelompok": 1
+    },
+    {
+      "id": "f_004",
+      "nama": "ANDI AMALIA NUR",
+      "kelas": "F",
+      "kelompok": 1
+    },
+    {
+      "id": "f_005",
+      "nama": "JELITA CAHYADI",
+      "kelas": "F",
+      "kelompok": 1
+    },
+    {
+      "id": "f_006",
+      "nama": "YUNANDA PUTRI",
+      "kelas": "F",
+      "kelompok": 1
+    },
+    {
+      "id": "f_007",
+      "nama": "LILIS FARLINA",
+      "kelas": "F",
+      "kelompok": 2
+    },
+    {
+      "id": "f_008",
+      "nama": "EDITA NABILA AUDI",
+      "kelas": "F",
+      "kelompok": 2
+    },
+    {
+      "id": "f_009",
+      "nama": "REZKY AMALYA",
+      "kelas": "F",
+      "kelompok": 2
+    },
+    {
+      "id": "f_010",
+      "nama": "ASMIRANDA",
+      "kelas": "F",
+      "kelompok": 2
+    },
+    {
+      "id": "f_011",
+      "nama": "DAVINA ZAKIYAH",
+      "kelas": "F",
+      "kelompok": 2
+    },
+    {
+      "id": "f_012",
+      "nama": "KHAIRIL ANWAR",
+      "kelas": "F",
+      "kelompok": 2
+    },
+    {
+      "id": "f_013",
+      "nama": "NUR AZIZA TUNNAFSIA",
+      "kelas": "F",
+      "kelompok": 3
+    },
+    {
+      "id": "f_014",
+      "nama": "NAFISAH ARIFAH",
+      "kelas": "F",
+      "kelompok": 3
+    },
+    {
+      "id": "f_015",
+      "nama": "NOVITA LATIEF",
+      "kelas": "F",
+      "kelompok": 3
+    },
+    {
+      "id": "f_016",
+      "nama": "AULIA ASWANI",
+      "kelas": "F",
+      "kelompok": 3
+    },
+    {
+      "id": "f_017",
+      "nama": "NUR FITRAH SALEH",
+      "kelas": "F",
+      "kelompok": 3
+    },
+    {
+      "id": "f_018",
+      "nama": "NUR ANNISA AZZAHRA",
+      "kelas": "F",
+      "kelompok": 3
+    },
+    {
+      "id": "f_019",
+      "nama": "AL GIBRAN RAMADHAN",
+      "kelas": "F",
+      "kelompok": 3
+    },
+    {
+      "id": "f_020",
+      "nama": "ANDI MUH FARID",
+      "kelas": "F",
+      "kelompok": 4
+    },
+    {
+      "id": "f_021",
+      "nama": "ANDI AULIA AZZAHRA",
+      "kelas": "F",
+      "kelompok": 4
+    },
+    {
+      "id": "f_022",
+      "nama": "NADIA",
+      "kelas": "F",
+      "kelompok": 4
+    },
+    {
+      "id": "f_023",
+      "nama": "NATALIA KRISSANTI",
+      "kelas": "F",
+      "kelompok": 4
+    },
+    {
+      "id": "f_024",
+      "nama": "NURUL FAUSIAH",
+      "kelas": "F",
+      "kelompok": 4
+    },
+    {
+      "id": "f_025",
+      "nama": "RIANY PRATIWI",
+      "kelas": "F",
+      "kelompok": 4
+    },
+    {
+      "id": "f_026",
+      "nama": "JUBLIANT ELIONEY",
+      "kelas": "F",
+      "kelompok": 4
+    },
+    {
+      "id": "f_027",
+      "nama": "NUR ANNISA FITRI",
+      "kelas": "F",
+      "kelompok": 5
+    },
+    {
+      "id": "f_028",
+      "nama": "MEILUNA",
+      "kelas": "F",
+      "kelompok": 5
+    },
+    {
+      "id": "f_029",
+      "nama": "YUKINO DHEA",
+      "kelas": "F",
+      "kelompok": 5
+    },
+    {
+      "id": "f_030",
+      "nama": "NAJLA MUTHIAH",
+      "kelas": "F",
+      "kelompok": 5
+    },
+    {
+      "id": "f_031",
+      "nama": "SYIFA NAFIZAH",
+      "kelas": "F",
+      "kelompok": 5
+    },
+    {
+      "id": "f_032",
+      "nama": "ARDIANSYAH",
+      "kelas": "F",
+      "kelompok": 5
+    },
+    {
+      "id": "f_033",
+      "nama": "NATASYA PUTRI",
+      "kelas": "F",
+      "kelompok": 6
+    },
+    {
+      "id": "f_034",
+      "nama": "NURHAFIZAH HAMKA",
+      "kelas": "F",
+      "kelompok": 6
+    },
+    {
+      "id": "f_035",
+      "nama": "ARISKA DWI AULIA",
+      "kelas": "F",
+      "kelompok": 6
+    },
+    {
+      "id": "f_036",
+      "nama": "NABILA",
+      "kelas": "F",
+      "kelompok": 6
+    },
+    {
+      "id": "f_037",
+      "nama": "MIFTAH AZIRA",
+      "kelas": "F",
+      "kelompok": 6
+    },
+    {
+      "id": "f_038",
+      "nama": "ANDI FIRDA SARI",
+      "kelas": "F",
+      "kelompok": 6
+    },
+    {
+      "id": "f_039",
+      "nama": "NADYA AFIFAH PUTRI",
+      "kelas": "F",
+      "kelompok": 6
+    }
+  ]
+}

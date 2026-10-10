@@ -1,0 +1,3018 @@
+[
+  {
+    "id": "a_001",
+    "name": "SALSA BILA IRSYA FITRI",
+    "class": "Class A",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_002",
+    "name": "REZKI AMANDA",
+    "class": "Class A",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_003",
+    "name": "NURATIKA RASYID",
+    "class": "Class A",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_004",
+    "name": "IRSA",
+    "class": "Class A",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_005",
+    "name": "ZAL ZA BILA",
+    "class": "Class A",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_006",
+    "name": "MUSLAENI AMIRUDDIN",
+    "class": "Class A",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_007",
+    "name": "KAMILA NAURA ASILA",
+    "class": "Class A",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_008",
+    "name": "PUTRA MAHKOTA",
+    "class": "Class A",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_009",
+    "name": "ZALZA FATIMAH SAHRA RAMADHANI",
+    "class": "Class A",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_010",
+    "name": "FIRQATUL MUQARRAMA",
+    "class": "Class A",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_011",
+    "name": "ANDHIKA SYAHRUL PRASETIAWAN SYAM",
+    "class": "Class A",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_012",
+    "name": "AISYAH AZ ZAHRA",
+    "class": "Class A",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_013",
+    "name": "ZAKIA NISWA",
+    "class": "Class A",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_014",
+    "name": "MAWARSENJIKA",
+    "class": "Class A",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_015",
+    "name": "ALMIRA SITI HAJAR",
+    "class": "Class A",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_016",
+    "name": "ERINA NIKEISHA",
+    "class": "Class A",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_017",
+    "name": "AZIRAH ASRIADI DAHLAN",
+    "class": "Class A",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_018",
+    "name": "JIHAN FADHILLAH MASKUR",
+    "class": "Class A",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_019",
+    "name": "SULFIYANI",
+    "class": "Class A",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_020",
+    "name": "NURASISAH",
+    "class": "Class A",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_021",
+    "name": "HERUCOKRO WICAKSONO",
+    "class": "Class A",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_022",
+    "name": "FADIAH ASKYAHRA RAMADHAN",
+    "class": "Class A",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_023",
+    "name": "NADYA AKMA AFIQA",
+    "class": "Class A",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_024",
+    "name": "SITI NUR AZIZAH",
+    "class": "Class A",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "a_025",
+    "name": "FIKRIATUK MUSTAKNI",
+    "class": "Class A",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_001",
+    "name": "NUR AULIA RUSTAN",
+    "class": "Class B",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_002",
+    "name": "ANDI ALIFIAH L TASYAM",
+    "class": "Class B",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_003",
+    "name": "SITI NUR DZAKIYYAH",
+    "class": "Class B",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_004",
+    "name": "REGINA",
+    "class": "Class B",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_005",
+    "name": "HARY MUHAYYAT",
+    "class": "Class B",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_006",
+    "name": "M. ANUGRAH",
+    "class": "Class B",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_007",
+    "name": "NUR ANUGRAH ANDINI",
+    "class": "Class B",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_008",
+    "name": "MUTIARA",
+    "class": "Class B",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_009",
+    "name": "AZIZA LUTFHI",
+    "class": "Class B",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_010",
+    "name": "GRACELIA INRI",
+    "class": "Class B",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_011",
+    "name": "ANISAH HUDANI",
+    "class": "Class B",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_012",
+    "name": "KEZIA PUTRI",
+    "class": "Class B",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_013",
+    "name": "WENNI AURA",
+    "class": "Class B",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_014",
+    "name": "NURFAHMI SAKINA",
+    "class": "Class B",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_015",
+    "name": "SANATANG",
+    "class": "Class B",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_016",
+    "name": "JUSRIANI",
+    "class": "Class B",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_017",
+    "name": "ANISAH NURAINI",
+    "class": "Class B",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_018",
+    "name": "ALIFIYYAH KHALILAH",
+    "class": "Class B",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_019",
+    "name": "KAFKA",
+    "class": "Class B",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_020",
+    "name": "AINUN MARDHIYANI",
+    "class": "Class B",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_021",
+    "name": "DIAN PUSPITA",
+    "class": "Class B",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_022",
+    "name": "WAHYUNI DWI",
+    "class": "Class B",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_023",
+    "name": "YOLDA PUTRI",
+    "class": "Class B",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_024",
+    "name": "MARIKO",
+    "class": "Class B",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_025",
+    "name": "NADIA",
+    "class": "Class B",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_026",
+    "name": "SITI FATIMAH",
+    "class": "Class B",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_027",
+    "name": "LISA AYNUN S.",
+    "class": "Class B",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_028",
+    "name": "NASHWA CEYDA",
+    "class": "Class B",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_029",
+    "name": "MUFLIH MUHLIS",
+    "class": "Class B",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_030",
+    "name": "YOGI CANDRA",
+    "class": "Class B",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_031",
+    "name": "KEISYA NAJWA",
+    "class": "Class B",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_032",
+    "name": "DINALORENSA",
+    "class": "Class B",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_033",
+    "name": "AYU FAKHIRA",
+    "class": "Class B",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_034",
+    "name": "NUR FADZLYZA",
+    "class": "Class B",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_035",
+    "name": "HANIFAH NUR AZIZAH",
+    "class": "Class B",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_036",
+    "name": "NUR AINUN",
+    "class": "Class B",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_037",
+    "name": "ZERANI",
+    "class": "Class B",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_038",
+    "name": "MUH CHOLLED",
+    "class": "Class B",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_039",
+    "name": "ARIL",
+    "class": "Class B",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_040",
+    "name": "FIANTIKA",
+    "class": "Class B",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_041",
+    "name": "SHELA RAMADHANI",
+    "class": "Class B",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "b_042",
+    "name": "ARIQAH SALSABILA",
+    "class": "Class B",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_001",
+    "name": "M. ISRA HARSYA",
+    "class": "Class C",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_002",
+    "name": "SUCI RAMADANI",
+    "class": "Class C",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_003",
+    "name": "NINDI SRIWIJAYA",
+    "class": "Class C",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_004",
+    "name": "ALL BRILLIANT RAENY FADMANI",
+    "class": "Class C",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_005",
+    "name": "NAZWA KIRANTI KAISUPY",
+    "class": "Class C",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_006",
+    "name": "RATU BULQIS ARTAMEVIA",
+    "class": "Class C",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_007",
+    "name": "NUR TALBIA HAMRUL",
+    "class": "Class C",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_008",
+    "name": "ST MUTIA RAMADHANI",
+    "class": "Class C",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_009",
+    "name": "NUR FITRIAH",
+    "class": "Class C",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_010",
+    "name": "ZAYYANAH DZATIL IZZAH RAMADHANI MAULANA",
+    "class": "Class C",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_011",
+    "name": "FATIMAH ZAHRA",
+    "class": "Class C",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_012",
+    "name": "RISKA AYU SAFITRI",
+    "class": "Class C",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_013",
+    "name": "AHMAD GAZALI NUR HASAN",
+    "class": "Class C",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_014",
+    "name": "ANGELICA C TOISUTA",
+    "class": "Class C",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_015",
+    "name": "A. NAYLA ZAHRATUSSITA",
+    "class": "Class C",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_016",
+    "name": "RIDZAH AQSHA AULIA IRWAN",
+    "class": "Class C",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_017",
+    "name": "ALYA AIRA SEPTIASA",
+    "class": "Class C",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_018",
+    "name": "INDA PUTRI DAMAYANTI",
+    "class": "Class C",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_019",
+    "name": "A'ISYAH 'UDZRI ALFIN",
+    "class": "Class C",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_020",
+    "name": "AHMAD IBRAHIM",
+    "class": "Class C",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_021",
+    "name": "KESYA PABATE",
+    "class": "Class C",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_022",
+    "name": "INCE MOH. CHALIQ ALNUGERAH",
+    "class": "Class C",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_023",
+    "name": "ALISYIAH AURELIA AINANAI HA",
+    "class": "Class C",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_024",
+    "name": "PRISKILA FEBRYANTI",
+    "class": "Class C",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_025",
+    "name": "NADIYAH NUR INAYAH AZIS",
+    "class": "Class C",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_026",
+    "name": "TITA AGUSTINA",
+    "class": "Class C",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_027",
+    "name": "RIYANNI AZZURI",
+    "class": "Class C",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_028",
+    "name": "TIKA RAMADANI",
+    "class": "Class C",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_029",
+    "name": "MUH. RADIL SETIAWAN",
+    "class": "Class C",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_030",
+    "name": "VELDIAN",
+    "class": "Class C",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_031",
+    "name": "RISMAYANTI",
+    "class": "Class C",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_032",
+    "name": "MANTASYAH",
+    "class": "Class C",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_033",
+    "name": "DIQRA ALMAQVIRA A.",
+    "class": "Class C",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_034",
+    "name": "ULPA WIDARTI",
+    "class": "Class C",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_035",
+    "name": "AUREL INDRI KAMALI",
+    "class": "Class C",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_036",
+    "name": "MUHAMMAD TRIANUGRAH",
+    "class": "Class C",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_037",
+    "name": "MUH.CHESSA ALFATIN NASRU",
+    "class": "Class C",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_038",
+    "name": "KHAIRIN SALSABILA",
+    "class": "Class C",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_039",
+    "name": "HANIIFATUL IZZATIL ISMAH",
+    "class": "Class C",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_040",
+    "name": "VIOLA JUNEY",
+    "class": "Class C",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "c_041",
+    "name": "SHEYLA ENJELIQUI BATARAGOA",
+    "class": "Class C",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_001",
+    "name": "MUH. NOVAL",
+    "class": "Class D",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_002",
+    "name": "MUHAMMAD FAIZ ASLAM",
+    "class": "Class D",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_003",
+    "name": "NUR AZIZAH NASRUDDIN",
+    "class": "Class D",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_004",
+    "name": "USWATUN KHAZANAH",
+    "class": "Class D",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_005",
+    "name": "SITI MUSDALIFAH",
+    "class": "Class D",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_006",
+    "name": "MIFTAHUL JANNAH",
+    "class": "Class D",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_007",
+    "name": "DARMATASYA RENHORAN",
+    "class": "Class D",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_008",
+    "name": "NUR HIFDAH MULIANA",
+    "class": "Class D",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_009",
+    "name": "NUR AISYAH",
+    "class": "Class D",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_010",
+    "name": "MUTIA REZA BAHAR",
+    "class": "Class D",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_011",
+    "name": "ANDI MUH. RIFQI RIFA’AT",
+    "class": "Class D",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_012",
+    "name": "VANNES",
+    "class": "Class D",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_013",
+    "name": "SHAFIQAH REZKY AURELIA",
+    "class": "Class D",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_014",
+    "name": "MERSI AULIA",
+    "class": "Class D",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_015",
+    "name": "AIRA SYHAFIRAH",
+    "class": "Class D",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_016",
+    "name": "NUR ALMIRA HAERANI",
+    "class": "Class D",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_017",
+    "name": "IN'AM FAUZIYYAH DAMRIN",
+    "class": "Class D",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_018",
+    "name": "MARSYA AYU",
+    "class": "Class D",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_019",
+    "name": "HUSNUL HATIMAH",
+    "class": "Class D",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_020",
+    "name": "ALFAJAR RAMADANA PUTRA",
+    "class": "Class D",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_021",
+    "name": "NURUL ANISA",
+    "class": "Class D",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_022",
+    "name": "ADE ARISTON PAKIDING",
+    "class": "Class D",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_023",
+    "name": "A. AFTARI",
+    "class": "Class D",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_024",
+    "name": "PUTRI KIRANA RAMADHANI",
+    "class": "Class D",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_025",
+    "name": "AINUL ATIQA NAJWA",
+    "class": "Class D",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_026",
+    "name": "ZAHIRAH HUSNA MUIS",
+    "class": "Class D",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_027",
+    "name": "SITI JULIANTI PRATIWI",
+    "class": "Class D",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_028",
+    "name": "CINTA",
+    "class": "Class D",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_029",
+    "name": "SALMAN AL FARISY",
+    "class": "Class D",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_030",
+    "name": "ALFIAN FITRA ZUUD",
+    "class": "Class D",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_031",
+    "name": "MUH.AKMAL FATIHUL IHSAN",
+    "class": "Class D",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_032",
+    "name": "AZ ZAHRAIN HAJATUL ARAFAH",
+    "class": "Class D",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_033",
+    "name": "NURUL FADILZA",
+    "class": "Class D",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_034",
+    "name": "NAJWA AZZAHRA",
+    "class": "Class D",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_035",
+    "name": "NUR ALIFKA",
+    "class": "Class D",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_036",
+    "name": "GAVRINA MELINDA PADATU",
+    "class": "Class D",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_037",
+    "name": "MUHAMMD RIZKY AL-BUKHORY",
+    "class": "Class D",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_038",
+    "name": "CHIARA CATHLINIYA HARIS",
+    "class": "Class D",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_039",
+    "name": "NURHIKMA REZKY AWALIYAH",
+    "class": "Class D",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_040",
+    "name": "SALSABILA SHIVA ALYA",
+    "class": "Class D",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_041",
+    "name": "MUSFINA",
+    "class": "Class D",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_042",
+    "name": "AXL CANTONA VIRGIAWAN",
+    "class": "Class D",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "d_043",
+    "name": "NAFIZAH NURFADIYAH",
+    "class": "Class D",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_001",
+    "name": "MOHD. QAFIZUL HAFIZ",
+    "class": "Class E",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_002",
+    "name": "SILPA ANANDA",
+    "class": "Class E",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_003",
+    "name": "SHATRIYA",
+    "class": "Class E",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_004",
+    "name": "ARINA HIDAYAH.S",
+    "class": "Class E",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_005",
+    "name": "JUMRATUNNISA",
+    "class": "Class E",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_006",
+    "name": "SABRINA",
+    "class": "Class E",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_007",
+    "name": "FANNY NAILA DZIHNI",
+    "class": "Class E",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_008",
+    "name": "ASYRAF AMIR",
+    "class": "Class E",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_009",
+    "name": "IKHWAN NABIL AN-NAQY",
+    "class": "Class E",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_010",
+    "name": "ASMIRANDA",
+    "class": "Class E",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_011",
+    "name": "NISWA ASZAHRA",
+    "class": "Class E",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_012",
+    "name": "PUTERI KEZIA LANTAWA",
+    "class": "Class E",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_013",
+    "name": "FITRIANI",
+    "class": "Class E",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_014",
+    "name": "RUKIA NABIL",
+    "class": "Class E",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_015",
+    "name": "HARTIRTA GANESA BUMI PUTRA",
+    "class": "Class E",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_016",
+    "name": "ULYA AZIZAH SYAHARUDDIN",
+    "class": "Class E",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_017",
+    "name": "DIEN HUSNIYAH",
+    "class": "Class E",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_018",
+    "name": "ANDI ALMAYRA ZAHRAMADHANI",
+    "class": "Class E",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_019",
+    "name": "MULIANA PUTRI",
+    "class": "Class E",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_020",
+    "name": "INDIRA",
+    "class": "Class E",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_021",
+    "name": "WIYANA ARSYTA",
+    "class": "Class E",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_022",
+    "name": "SYERINE NUR AZIZAH",
+    "class": "Class E",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_023",
+    "name": "KEYZA SALSABILA",
+    "class": "Class E",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_024",
+    "name": "RESKIH FAUSIAH",
+    "class": "Class E",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_025",
+    "name": "ANASTASYA PUTRI ADNAN",
+    "class": "Class E",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_026",
+    "name": "MARWAN IFALDO",
+    "class": "Class E",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_027",
+    "name": "ANNISA AL MAGFIRA",
+    "class": "Class E",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_028",
+    "name": "ELIN FATHIYYA NURAHMA",
+    "class": "Class E",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_029",
+    "name": "BILLY DAUGHERTY TIMBA",
+    "class": "Class E",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_030",
+    "name": "NURISKA",
+    "class": "Class E",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_031",
+    "name": "NAJWA KHAERUNNISA",
+    "class": "Class E",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_032",
+    "name": "ISMAWARDANI",
+    "class": "Class E",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_033",
+    "name": "SUTRAEKAPLANI",
+    "class": "Class E",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_034",
+    "name": "IERE THAEDZA MULYADI",
+    "class": "Class E",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_035",
+    "name": "SYAIRE POPPY KONDOLELE",
+    "class": "Class E",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_036",
+    "name": "RISKA NOVITA SYAWALIA",
+    "class": "Class E",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_037",
+    "name": "MISWAH ALIYAH USWATUL KHASANAH",
+    "class": "Class E",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_038",
+    "name": "NURUL NASYWA NASYIFA.S",
+    "class": "Class E",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_039",
+    "name": "ANNISA KHUMAERAH",
+    "class": "Class E",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_040",
+    "name": "WIWI INDASARI",
+    "class": "Class E",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_041",
+    "name": "NUR RAHMA SUCI",
+    "class": "Class E",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "e_042",
+    "name": "MUH. FATHIR AZHAR",
+    "class": "Class E",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_001",
+    "name": "AMANDA NUR H",
+    "class": "Class F",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_002",
+    "name": "KEISHA SALSABILA",
+    "class": "Class F",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_003",
+    "name": "ROSALINA RINDING",
+    "class": "Class F",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_004",
+    "name": "ANDI AMALIA NUR",
+    "class": "Class F",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_005",
+    "name": "JELITA CAHYADI",
+    "class": "Class F",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_006",
+    "name": "YUNANDA PUTRI",
+    "class": "Class F",
+    "group": "Group 1",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_007",
+    "name": "LILIS FARLINA",
+    "class": "Class F",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_008",
+    "name": "EDITA NABILA AUDI",
+    "class": "Class F",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_009",
+    "name": "REZKY AMALYA",
+    "class": "Class F",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_010",
+    "name": "ASMIRANDA",
+    "class": "Class F",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_011",
+    "name": "DAVINA ZAKIYAH",
+    "class": "Class F",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_012",
+    "name": "KHAIRIL ANWAR",
+    "class": "Class F",
+    "group": "Group 2",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_013",
+    "name": "NUR AZIZA TUNNAFSIA",
+    "class": "Class F",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_014",
+    "name": "NAFISAH ARIFAH",
+    "class": "Class F",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_015",
+    "name": "NOVITA LATIEF",
+    "class": "Class F",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_016",
+    "name": "AULIA ASWANI",
+    "class": "Class F",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_017",
+    "name": "NUR FITRAH SALEH",
+    "class": "Class F",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_018",
+    "name": "NUR ANNISA AZZAHRA",
+    "class": "Class F",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_019",
+    "name": "AL GIBRAN RAMADHAN",
+    "class": "Class F",
+    "group": "Group 3",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_020",
+    "name": "ANDI MUH FARID",
+    "class": "Class F",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_021",
+    "name": "ANDI AULIA AZZAHRA",
+    "class": "Class F",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_022",
+    "name": "NADIA",
+    "class": "Class F",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_023",
+    "name": "NATALIA KRISSANTI",
+    "class": "Class F",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_024",
+    "name": "NURUL FAUSIAH",
+    "class": "Class F",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_025",
+    "name": "RIANY PRATIWI",
+    "class": "Class F",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_026",
+    "name": "JUBLIANT ELIONEY",
+    "class": "Class F",
+    "group": "Group 4",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_027",
+    "name": "NUR ANNISA FITRI",
+    "class": "Class F",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_028",
+    "name": "MEILUNA",
+    "class": "Class F",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_029",
+    "name": "YUKINO DHEA",
+    "class": "Class F",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_030",
+    "name": "NAJLA MUTHIAH",
+    "class": "Class F",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_031",
+    "name": "SYIFA NAFIZAH",
+    "class": "Class F",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_032",
+    "name": "ARDIANSYAH",
+    "class": "Class F",
+    "group": "Group 5",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_033",
+    "name": "NATASYA PUTRI",
+    "class": "Class F",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_034",
+    "name": "NURHAFIZAH HAMKA",
+    "class": "Class F",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_035",
+    "name": "ARISKA DWI AULIA",
+    "class": "Class F",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_036",
+    "name": "NABILA",
+    "class": "Class F",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_037",
+    "name": "MIFTAH AZIRA",
+    "class": "Class F",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_038",
+    "name": "ANDI FIRDA SARI",
+    "class": "Class F",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  },
+  {
+    "id": "f_039",
+    "name": "NADYA AFIFAH PUTRI",
+    "class": "Class F",
+    "group": "Group 6",
+    "score": 100,
+    "note": "No reductions",
+    "scores": {
+      "Business": 0,
+      "English": 0,
+      "Entrepreneurship": 0
+    }
+  }
+]

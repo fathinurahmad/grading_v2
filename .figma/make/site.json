@@ -1,0 +1,14 @@
+{
+  "title": "English Camp - Campus Grading System",
+  "description": "Unified grading and assessment platform for English Camp Accounting Department.",
+  "icons": {
+    "icon": "/favicon.png"
+  },
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
