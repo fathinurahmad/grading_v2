@@ -561,7 +561,7 @@ const roleMeta = {
     accent: "blue",
   },
   panitia: {
-    label: "Panitia",
+    label: "Committee",
     title: "Student Score Evaluation",
     subtitle: "Review scores with clarity and accountability.",
     accent: "purple",
@@ -1661,7 +1661,7 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
           newScore: value,
           pointsChange: value - selected.score,
           reason: reason.trim() || "Score adjustment",
-          committee: committee.trim() || "Panitia Kedisiplinan",
+          committee: committee.trim() || "Discipline Committee",
         })
 
         setSelected((prev) => ({
@@ -2109,7 +2109,7 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
                         <dl>
                           <div>
                             <dt>Committee</dt>
-                            <dd>{item.committee || "Panitia Kedisiplinan"}</dd>
+                            <dd>{item.committee || "Discipline Committee"}</dd>
                           </div>
                           <div>
                             <dt>Reason</dt>
@@ -2187,7 +2187,7 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
                       <dl>
                         <div>
                           <dt>Committee</dt>
-                          <dd>{item.committee || "Panitia Kedisiplinan"}</dd>
+                          <dd>{item.committee || "Discipline Committee"}</dd>
                         </div>
                         <div>
                           <dt>Reason</dt>
