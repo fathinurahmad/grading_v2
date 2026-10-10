@@ -838,7 +838,7 @@ function AppShell({
   const meta = roleMeta[role]
   const nav = [
     ["Home", "home"],
-    ["Panduan", "book"],
+    ["Guide", "book"],
   ]
   return (
     <div className={`app-shell role-${meta.accent}`}>
@@ -858,7 +858,7 @@ function AppShell({
         <div
           className="side-profile"
           style={{ cursor: "pointer" }}
-          onClick={() => setCurrentTab("Panduan")}
+          onClick={() => setCurrentTab("Guide")}
         >
           <Avatar
             name="User"
@@ -885,7 +885,7 @@ function AppShell({
             <Brand compact />
           </div>
           <div className="desktop-title">
-            <span>{currentTab === "Panduan" ? `Guide · ${meta.label}` : meta.label}</span>
+            <span>{currentTab === "Guide" ? `Guide · ${meta.label}` : meta.label}</span>
           </div>
           <div className="top-actions">
             {installPrompt && !installed && (
@@ -921,7 +921,7 @@ function AppShell({
             />
           </div>
         </header>
-        {currentTab === "Panduan" ? (
+        {currentTab === "Guide" ? (
           <ProfilePage
             role={role}
             onLogout={onLogout}
