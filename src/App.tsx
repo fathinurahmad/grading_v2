@@ -1625,7 +1625,11 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
     setErrors(next)
     if (!Object.keys(next).length) {
       try {
-        const panitiaReason = reason.trim() || selected.panitiaNote || selected.note || "No reductions"
+        const panitiaReason =
+          reason.trim() ||
+          selected.panitiaNote ||
+          (selected.note && selected.note !== selected.dosenNote ? selected.note : null) ||
+          "No reductions"
         await updateStudentScoreInFirestore(selected.id, value, panitiaReason, {
           studentId: selected.id,
           studentName: selected.name,
@@ -1835,16 +1839,9 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
                     <small>{student.group}</small>
                   </span>
                   <StatusScore score={student.score} />
-                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", justifyContent: "center" }}>
-                    <span className="current-note" style={{ margin: 0 }}>
-                      {student.panitiaNote || student.note || "No reductions"}
-                    </span>
-                    {student.dosenNote && (
-                      <span style={{ fontSize: "10px", color: "#166534", background: "#f0fdf4", border: "1px solid #bbf7d0", padding: "1px 6px", borderRadius: "4px", width: "fit-content", fontWeight: 600 }}>
-                        🎓 Dosen: {student.dosenNote}
-                      </span>
-                    )}
-                  </div>
+                  <span className="current-note">
+                    {student.panitiaNote || (student.note && student.note !== student.dosenNote ? student.note : null) || "No reductions"}
+                  </span>
                   <div className="row-actions">
                     <Button
                       className="secondary compact"
@@ -2106,7 +2103,13 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
                     <div className="timeline-content">
                       <span>Current Record</span>
                       <Heading level={4}>Score: {selected.score} points</Heading>
-                      <p>{selected.panitiaNote || selected.note || "No score reductions recorded yet."}</p>
+                      <p>
+                        {selected.panitiaNote ||
+                          (selected.note && selected.note !== selected.dosenNote
+                            ? selected.note
+                            : null) ||
+                          "No score reductions recorded yet."}
+                      </p>
                     </div>
                   </article>
                 )}
