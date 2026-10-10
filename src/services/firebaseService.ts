@@ -24,6 +24,8 @@ export interface FirebaseStudent {
   group: string
   score: number
   note: string
+  dosenNote?: string
+  panitiaNote?: string
   scores: {
     Business: number
     English: number
@@ -144,6 +146,7 @@ export async function updateStudentScoreInFirestore(
       {
         score: newScore,
         note: note,
+        panitiaNote: note,
       },
       { merge: true }
     )
@@ -192,7 +195,7 @@ export async function submitLecturerScoresInFirestore(
             scores: {
               [subject]: newScore,
             },
-            ...(note ? { note } : {}),
+            ...(note ? { dosenNote: note } : {}),
           },
           { merge: true }
         )
@@ -310,6 +313,34 @@ export function subscribeScoreHistory(
     return unsubscribe
   } catch (err) {
     console.warn("Firebase history not available:", err)
+    return () => {}
+  }
+}
+
+// 5b. All Students Score History (Full Audit Log)
+export function subscribeAllScoreHistory(
+  onUpdate: (history: ScoreHistoryEntry[]) => void
+) {
+  try {
+    const historyCol = collection(db, "score_history")
+    const unsubscribe = onSnapshot(
+      historyCol,
+      (snapshot) => {
+        const list: ScoreHistoryEntry[] = []
+        snapshot.forEach((docSnap) => {
+          list.push({ id: docSnap.id, ...(docSnap.data() as ScoreHistoryEntry) })
+        })
+        list.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
+        onUpdate(list)
+      },
+      (error) => {
+        console.warn("Firestore all history error:", error)
+        onUpdate([])
+      }
+    )
+    return unsubscribe
+  } catch (err) {
+    onUpdate([])
     return () => {}
   }
 }
@@ -434,6 +465,7 @@ export interface FirebaseCommitteeMember {
   position: string
   score: number
   note: string
+  steeringNote?: string
 }
 
 export function subscribeCommitteeMembers(
@@ -501,7 +533,7 @@ export async function updateCommitteeMemberScoreInFirestore(
     const memberRef = doc(db, "committee", memberId)
     await updateDoc(memberRef, {
       score: newScore,
-      ...(note ? { note } : {}),
+      ...(note ? { note, steeringNote: note } : {}),
     })
   } catch (err) {
     console.error("Failed to update committee score in Firestore:", err)
@@ -530,27 +562,73 @@ export function subscribeCommitteeScoreHistory(
   onUpdate: (history: CommitteeScoreHistoryEntry[]) => void
 ) {
   try {
-    const q = query(
-      collection(db, "committee_score_history"),
-      where("memberId", "==", memberId),
-      orderBy("timestamp", "desc")
-    )
-    return onSnapshot(
-      q,
+    const historyCol = collection(db, "committee_score_history")
+    const unsubscribe = onSnapshot(
+      historyCol,
       (snapshot) => {
         const list: CommitteeScoreHistoryEntry[] = []
-        snapshot.forEach((d) => {
-          list.push({ id: d.id, ...(d.data() as Omit<CommitteeScoreHistoryEntry, "id">) })
+        snapshot.forEach((docSnap) => {
+          const data = docSnap.data() as CommitteeScoreHistoryEntry
+          if (data.memberId === memberId) {
+            list.push({ id: docSnap.id, ...data })
+          }
+        })
+        // Sort newest first
+        list.sort((a, b) => {
+          const tA = a.timestamp?.toDate
+            ? a.timestamp.toDate().getTime()
+            : new Date(a.createdAtIso || a.timestamp || 0).getTime()
+          const tB = b.timestamp?.toDate
+            ? b.timestamp.toDate().getTime()
+            : new Date(b.createdAtIso || b.timestamp || 0).getTime()
+          return tB - tA
         })
         onUpdate(list)
       },
-      (err) => {
-        console.warn("Firestore committee history listener error:", err)
+      (error) => {
+        console.warn("Firestore committee history error:", error)
         onUpdate([])
       }
     )
+    return unsubscribe
   } catch (err) {
     console.warn("Failed to subscribe to committee score history:", err)
+    return () => {}
+  }
+}
+
+// 12b. All Committee Score History (Full Audit Log)
+export function subscribeAllCommitteeScoreHistory(
+  onUpdate: (history: CommitteeScoreHistoryEntry[]) => void
+) {
+  try {
+    const historyCol = collection(db, "committee_score_history")
+    const unsubscribe = onSnapshot(
+      historyCol,
+      (snapshot) => {
+        const list: CommitteeScoreHistoryEntry[] = []
+        snapshot.forEach((docSnap) => {
+          list.push({ id: docSnap.id, ...(docSnap.data() as CommitteeScoreHistoryEntry) })
+        })
+        list.sort((a, b) => {
+          const tA = a.timestamp?.toDate
+            ? a.timestamp.toDate().getTime()
+            : new Date(a.createdAtIso || a.timestamp || 0).getTime()
+          const tB = b.timestamp?.toDate
+            ? b.timestamp.toDate().getTime()
+            : new Date(b.createdAtIso || b.timestamp || 0).getTime()
+          return tB - tA
+        })
+        onUpdate(list)
+      },
+      (error) => {
+        console.warn("Firestore all committee history error:", error)
+        onUpdate([])
+      }
+    )
+    return unsubscribe
+  } catch (err) {
+    onUpdate([])
     return () => {}
   }
 }
@@ -573,15 +651,18 @@ export async function updateCommitteeMemberWithHistoryInFirestore(
       {
         score: newScore,
         note: note,
+        steeringNote: note,
       },
       { merge: true }
     )
 
     try {
+      const nowIso = new Date().toISOString()
       await addDoc(collection(db, "committee_score_history"), {
         ...historyData,
-        timestamp: serverTimestamp(),
-        createdAtIso: new Date().toISOString(),
+        timestamp: nowIso,
+        createdAt: serverTimestamp(),
+        createdAtIso: nowIso,
       })
     } catch (histErr) {
       console.warn("Could not save committee history record:", histErr)
@@ -623,6 +704,8 @@ export async function resetAllSystemDataInFirestore() {
             {
               score: 100,
               note: "No reductions",
+              panitiaNote: "No reductions",
+              dosenNote: "",
               scores: {
                 Business: 0,
                 English: 0,
@@ -647,6 +730,7 @@ export async function resetAllSystemDataInFirestore() {
             {
               score: 100,
               note: "No reductions",
+              steeringNote: "No reductions",
             },
             { merge: true }
           )

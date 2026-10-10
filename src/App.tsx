@@ -30,6 +30,7 @@ import {
   updateStudentScoreInFirestore,
   submitLecturerScoresInFirestore,
   subscribeScoreHistory,
+  subscribeAllScoreHistory,
   subscribeSystemConfig,
   setSystemLockInFirestore,
   subscribeCommitteeScores,
@@ -40,6 +41,7 @@ import {
   updateCommitteeMemberScoreInFirestore,
   updateCommitteeMemberWithHistoryInFirestore,
   subscribeCommitteeScoreHistory,
+  subscribeAllCommitteeScoreHistory,
   resetAllSystemDataInFirestore,
   addStudentToFirestore,
   updateStudentDetailsInFirestore,
@@ -1114,6 +1116,8 @@ interface MasterStudent {
   group: string
   score: number
   note: string
+  dosenNote?: string
+  panitiaNote?: string
   scores: {
     Business: number
     English: number
@@ -1547,6 +1551,8 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
   const [committee, setCommittee] = useState("")
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [historyList, setHistoryList] = useState<ScoreHistoryEntry[]>([])
+  const [allHistoryList, setAllHistoryList] = useState<ScoreHistoryEntry[]>([])
+  const [historyTab, setHistoryTab] = useState<"single" | "all">("single")
 
   const handleRefresh = async () => {
     setIsRefreshing(true)
@@ -1578,6 +1584,11 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
       return () => unsub()
     }
   }, [selected?.id])
+
+  useEffect(() => {
+    const unsub = subscribeAllScoreHistory(setAllHistoryList)
+    return () => unsub()
+  }, [])
 
   const availableClasses = useMemo(() => {
     const list = Array.from(new Set(students.map((s) => s.class))).filter(Boolean)
@@ -1626,20 +1637,22 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
     setErrors(next)
     if (!Object.keys(next).length) {
       try {
-        await updateStudentScoreInFirestore(selected.id, value, reason.trim() || selected.note, {
+        const panitiaReason = reason.trim() || selected.panitiaNote || selected.note || "No reductions"
+        await updateStudentScoreInFirestore(selected.id, value, panitiaReason, {
           studentId: selected.id,
           studentName: selected.name,
           oldScore: selected.score,
           newScore: value,
           pointsChange: value - selected.score,
           reason: reason.trim() || "Score adjustment",
-          committee: committee.trim() || "Steering Committee",
+          committee: committee.trim() || "Panitia Kedisiplinan",
         })
 
         setSelected((prev) => ({
           ...prev,
           score: value,
-          note: reason.trim() || prev.note,
+          note: panitiaReason,
+          panitiaNote: panitiaReason,
         }))
         setSheet("success")
       } catch (err: any) {
@@ -1776,6 +1789,16 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
               </label>
               <Button
                 className="filter-button secondary"
+                onClick={() => {
+                  setHistoryTab("all")
+                  setSheet("history")
+                }}
+              >
+                <Icon name="clock" />
+                <span>Full History</span>
+              </Button>
+              <Button
+                className="filter-button secondary"
                 onClick={() => setSheet("filter")}
               >
                 <Icon name="filter" />
@@ -1806,7 +1829,7 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
                 <span>Student</span>
                 <span>Class & group</span>
                 <span>Remaining</span>
-                <span>Current note</span>
+                <span>Discipline note</span>
                 <span>Actions</span>
               </div>
               {filtered.map((student) => (
@@ -1824,13 +1847,23 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
                     <small>{student.group}</small>
                   </span>
                   <StatusScore score={student.score} />
-                  <span className="current-note">{student.note}</span>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", justifyContent: "center" }}>
+                    <span className="current-note" style={{ margin: 0 }}>
+                      {student.panitiaNote || student.note || "No reductions"}
+                    </span>
+                    {student.dosenNote && (
+                      <span style={{ fontSize: "10px", color: "#166534", background: "#f0fdf4", border: "1px solid #bbf7d0", padding: "1px 6px", borderRadius: "4px", width: "fit-content", fontWeight: 600 }}>
+                        🎓 Dosen: {student.dosenNote}
+                      </span>
+                    )}
+                  </div>
                   <div className="row-actions">
                     <Button
                       className="secondary compact"
                       icon="clock"
                       onClick={() => {
                         setSelected(student)
+                        setHistoryTab("single")
                         setSheet("history")
                       }}
                     >
@@ -1982,83 +2015,187 @@ function PanitiaDashboard({ onLogout }: { onLogout: () => void }) {
           onClose={() => setSheet(null)}
           className="history-sheet"
         >
-          <div className="student-summary">
-            <Avatar name={selected.name} purple />
-            <div className="student-summary-info">
-              <strong>{selected.name}</strong>
-              <span className="student-meta">
-                {selected.class} · {selected.group}
-              </span>
-            </div>
-            <StatusScore score={selected.score} />
+          <div style={{ display: "flex", gap: "8px", marginBottom: "16px", padding: "4px", background: "#f1f5f9", borderRadius: "12px" }}>
+            <button
+              type="button"
+              style={{
+                flex: 1,
+                padding: "8px 12px",
+                border: "none",
+                borderRadius: "8px",
+                background: historyTab === "single" ? "#23493b" : "transparent",
+                color: historyTab === "single" ? "#ffffff" : "#475569",
+                fontWeight: 600,
+                fontSize: "12px",
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+              onClick={() => setHistoryTab("single")}
+            >
+              {selected?.name ? selected.name.split(" ")[0] : "Student"} History ({historyList.length})
+            </button>
+            <button
+              type="button"
+              style={{
+                flex: 1,
+                padding: "8px 12px",
+                border: "none",
+                borderRadius: "8px",
+                background: historyTab === "all" ? "#23493b" : "transparent",
+                color: historyTab === "all" ? "#ffffff" : "#475569",
+                fontWeight: 600,
+                fontSize: "12px",
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+              onClick={() => setHistoryTab("all")}
+            >
+              Full History Log ({allHistoryList.length})
+            </button>
           </div>
-          <div className="timeline">
-            {historyList.length > 0 ? (
-              historyList.map((item) => (
-                <article key={item.id || item.timestamp}>
-                  <div className="timeline-dot">
-                    <Icon name="activity" size={15} />
+
+          {historyTab === "single" ? (
+            <>
+              <div className="student-summary">
+                <Avatar name={selected.name} purple />
+                <div className="student-summary-info">
+                  <strong>{selected.name}</strong>
+                  <span className="student-meta">
+                    {selected.class} · {selected.group}
+                  </span>
+                </div>
+                <StatusScore score={selected.score} />
+              </div>
+              <div className="timeline">
+                {historyList.length > 0 ? (
+                  historyList.map((item) => (
+                    <article key={item.id || item.timestamp}>
+                      <div className="timeline-dot">
+                        <Icon name="activity" size={15} />
+                      </div>
+                      <div className="timeline-content">
+                        <span>
+                          {new Date(item.timestamp).toLocaleString("en-GB", {
+                            dateStyle: "medium",
+                            timeStyle: "short",
+                          })}
+                        </span>
+                        <Heading level={4}>
+                          {item.pointsChange < 0
+                            ? `Score reduced by ${Math.abs(item.pointsChange)} points`
+                            : item.pointsChange > 0
+                              ? `Score increased by ${item.pointsChange} points`
+                              : "Score updated"}
+                        </Heading>
+                        <div className="score-change">
+                          <b>{item.oldScore}</b>
+                          <Icon name="chevron" />
+                          <b>{item.newScore}</b>
+                          <em>
+                            {item.pointsChange > 0
+                              ? `+${item.pointsChange}`
+                              : item.pointsChange}
+                          </em>
+                        </div>
+                        <dl>
+                          <div>
+                            <dt>Committee</dt>
+                            <dd>{item.committee || "Panitia Kedisiplinan"}</dd>
+                          </div>
+                          <div>
+                            <dt>Reason</dt>
+                            <dd>{item.reason || "Score evaluation"}</dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </article>
+                  ))
+                ) : (
+                  <article>
+                    <div className="timeline-dot">
+                      <Icon name="activity" size={15} />
+                    </div>
+                    <div className="timeline-content">
+                      <span>Current Record</span>
+                      <Heading level={4}>Score: {selected.score} points</Heading>
+                      <p>{selected.panitiaNote || selected.note || "No score reductions recorded yet."}</p>
+                    </div>
+                  </article>
+                )}
+                <article>
+                  <div className="timeline-dot light">
+                    <Icon name="check" size={15} />
                   </div>
                   <div className="timeline-content">
-                    <span>
-                      {new Date(item.timestamp).toLocaleString("en-GB", {
-                        dateStyle: "medium",
-                        timeStyle: "short",
-                      })}
-                    </span>
-                    <Heading level={4}>
-                      {item.pointsChange < 0
-                        ? `Score reduced by ${Math.abs(item.pointsChange)} points`
-                        : item.pointsChange > 0
-                          ? `Score increased by ${item.pointsChange} points`
-                          : "Score updated"}
-                    </Heading>
-                    <div className="score-change">
-                      <b>{item.oldScore}</b>
-                      <Icon name="chevron" />
-                      <b>{item.newScore}</b>
-                      <em>
-                        {item.pointsChange > 0
-                          ? `+${item.pointsChange}`
-                          : item.pointsChange}
-                      </em>
-                    </div>
-                    <dl>
-                      <div>
-                        <dt>Committee</dt>
-                        <dd>{item.committee || "Steering Committee"}</dd>
-                      </div>
-                      <div>
-                        <dt>Reason</dt>
-                        <dd>{item.reason || "Score evaluation"}</dd>
-                      </div>
-                    </dl>
+                    <span>Camp Start</span>
+                    <Heading level={4}>Initial score created</Heading>
+                    <p>Student evaluation record started at 100.</p>
                   </div>
                 </article>
-              ))
-            ) : (
-              <article>
-                <div className="timeline-dot">
-                  <Icon name="activity" size={15} />
-                </div>
-                <div className="timeline-content">
-                  <span>Current Record</span>
-                  <Heading level={4}>Score: {selected.score} points</Heading>
-                  <p>{selected.note || "No score reductions recorded yet."}</p>
-                </div>
-              </article>
-            )}
-            <article>
-              <div className="timeline-dot light">
-                <Icon name="check" size={15} />
               </div>
-              <div className="timeline-content">
-                <span>Camp Start</span>
-                <Heading level={4}>Initial score created</Heading>
-                <p>Student evaluation record started at 100.</p>
-              </div>
-            </article>
-          </div>
+            </>
+          ) : (
+            <div className="timeline">
+              {allHistoryList.length > 0 ? (
+                allHistoryList.map((item) => (
+                  <article key={item.id || item.timestamp}>
+                    <div className="timeline-dot">
+                      <Icon name="activity" size={15} />
+                    </div>
+                    <div className="timeline-content">
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "4px" }}>
+                        <strong style={{ fontSize: "13px", color: "#1e293b" }}>{item.studentName}</strong>
+                        <span style={{ fontSize: "11px", color: "#64748b" }}>
+                          {new Date(item.timestamp).toLocaleString("en-GB", {
+                            dateStyle: "medium",
+                            timeStyle: "short",
+                          })}
+                        </span>
+                      </div>
+                      <Heading level={4}>
+                        {item.pointsChange < 0
+                          ? `Reduced by ${Math.abs(item.pointsChange)} pts`
+                          : item.pointsChange > 0
+                            ? `Increased by ${item.pointsChange} pts`
+                            : "Updated"}
+                      </Heading>
+                      <div className="score-change">
+                        <b>{item.oldScore}</b>
+                        <Icon name="chevron" />
+                        <b>{item.newScore}</b>
+                        <em>
+                          {item.pointsChange > 0
+                            ? `+${item.pointsChange}`
+                            : item.pointsChange}
+                        </em>
+                      </div>
+                      <dl>
+                        <div>
+                          <dt>Committee</dt>
+                          <dd>{item.committee || "Panitia Kedisiplinan"}</dd>
+                        </div>
+                        <div>
+                          <dt>Reason</dt>
+                          <dd>{item.reason || "Score adjustment"}</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </article>
+                ))
+              ) : (
+                <article>
+                  <div className="timeline-dot light">
+                    <Icon name="check" size={15} />
+                  </div>
+                  <div className="timeline-content">
+                    <span>No Deductions Recorded</span>
+                    <Heading level={4}>All students at 100 points</Heading>
+                    <p>No reduction history entries exist in the system.</p>
+                  </div>
+                </article>
+              )}
+            </div>
+          )}
         </Sheet>
       )}
 
@@ -2100,6 +2237,8 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
   const [evaluator, setEvaluator] = useState("")
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [historyList, setHistoryList] = useState<CommitteeScoreHistoryEntry[]>([])
+  const [allHistoryList, setAllHistoryList] = useState<CommitteeScoreHistoryEntry[]>([])
+  const [historyTab, setHistoryTab] = useState<"single" | "all">("single")
 
   useEffect(() => {
     const unsub = subscribeCommitteeMembers((members) => {
@@ -2123,6 +2262,11 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
       return () => unsub()
     }
   }, [selected?.id])
+
+  useEffect(() => {
+    const unsub = subscribeAllCommitteeScoreHistory(setAllHistoryList)
+    return () => unsub()
+  }, [])
 
   const divisions = [
     "All Divisions",
@@ -2155,6 +2299,7 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
 
   const openHistory = (member: FirebaseCommitteeMember) => {
     setSelected(member)
+    setHistoryTab("single")
     setSheet("history")
   }
 
@@ -2176,7 +2321,7 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
 
     if (!Object.keys(next).length) {
       const pointsDiff = value - currentScore
-      const reasonText = reason.trim() || selected.note || "Performance review"
+      const reasonText = reason.trim() || selected.steeringNote || selected.note || "Performance review"
       const evaluatorText = evaluator.trim() || "Steering Committee"
 
       try {
@@ -2201,6 +2346,7 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
           ...prev,
           score: value,
           note: reasonText,
+          steeringNote: reasonText,
         }))
         setSheet("success")
       } catch (err) {
@@ -2346,6 +2492,16 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
               </label>
               <Button
                 className="filter-button secondary"
+                onClick={() => {
+                  setHistoryTab("all")
+                  setSheet("history")
+                }}
+              >
+                <Icon name="clock" />
+                <span>Full History</span>
+              </Button>
+              <Button
+                className="filter-button secondary"
                 onClick={() => setSheet("filter")}
               >
                 <Icon name="filter" />
@@ -2370,7 +2526,7 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
                 <span>Member</span>
                 <span>Division & Position</span>
                 <span>Score</span>
-                <span>Current Note</span>
+                <span>Steering note</span>
                 <span>Actions</span>
               </div>
               {filteredCommittee.map((member, index) => (
@@ -2388,7 +2544,7 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
                     <small>{member.position}</small>
                   </span>
                   <StatusScore score={member.score ?? 100} />
-                  <span className="current-note">{member.note || "No reductions"}</span>
+                  <span className="current-note">{member.steeringNote || member.note || "No reductions"}</span>
                   <div className="row-actions">
                     <Button
                       className="secondary compact"
@@ -2535,74 +2691,212 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
       {/* Committee History Sheet */}
       {sheet === "history" && (
         <Sheet
-          title="Committee Evaluation History"
+          title="Score History"
           onClose={() => setSheet(null)}
           className="history-sheet"
         >
-          <div className="student-summary">
-            <Avatar name={selected.name} purple />
-            <div className="student-summary-info">
-              <strong>{selected.name}</strong>
-              <span className="student-meta">
-                {selected.position} · {selected.division}
-              </span>
-            </div>
-            <StatusScore score={selected.score ?? 100} />
+          <div style={{ display: "flex", gap: "8px", marginBottom: "16px", padding: "4px", background: "#f1f5f9", borderRadius: "12px" }}>
+            <button
+              type="button"
+              style={{
+                flex: 1,
+                padding: "8px 12px",
+                border: "none",
+                borderRadius: "8px",
+                background: historyTab === "single" ? "#23493b" : "transparent",
+                color: historyTab === "single" ? "#ffffff" : "#475569",
+                fontWeight: 600,
+                fontSize: "12px",
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+              onClick={() => setHistoryTab("single")}
+            >
+              {selected?.name ? selected.name.split(" ")[0] : "Member"} History ({historyList.length})
+            </button>
+            <button
+              type="button"
+              style={{
+                flex: 1,
+                padding: "8px 12px",
+                border: "none",
+                borderRadius: "8px",
+                background: historyTab === "all" ? "#23493b" : "transparent",
+                color: historyTab === "all" ? "#ffffff" : "#475569",
+                fontWeight: 600,
+                fontSize: "12px",
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}
+              onClick={() => setHistoryTab("all")}
+            >
+              Full History Log ({allHistoryList.length})
+            </button>
           </div>
-          <div className="timeline">
-            {historyList.length > 0 ? (
-              historyList.map((item) => (
-                <article key={item.id || item.timestamp}>
-                  <div className="timeline-dot">
-                    <Icon name="activity" size={15} />
+
+          {historyTab === "single" ? (
+            <>
+              <div className="student-summary">
+                <Avatar name={selected.name} purple />
+                <div className="student-summary-info">
+                  <strong>{selected.name}</strong>
+                  <span className="student-meta">
+                    {selected.position} · {selected.division}
+                  </span>
+                </div>
+                <StatusScore score={selected.score ?? 100} />
+              </div>
+              <div className="timeline">
+                {historyList.length > 0 ? (
+                  historyList.map((item) => {
+                    const itemDate = item.createdAtIso
+                      ? new Date(item.createdAtIso)
+                      : item.timestamp?.toDate
+                        ? item.timestamp.toDate()
+                        : item.timestamp
+                          ? new Date(item.timestamp)
+                          : new Date()
+                    return (
+                      <article key={item.id || item.timestamp}>
+                        <div className="timeline-dot">
+                          <Icon name="activity" size={15} />
+                        </div>
+                        <div className="timeline-content">
+                          <span>
+                            {itemDate.toLocaleString("en-GB", {
+                              dateStyle: "medium",
+                              timeStyle: "short",
+                            })}
+                          </span>
+                          <Heading level={4}>
+                            {item.pointsChange < 0
+                              ? `Score reduced by ${Math.abs(item.pointsChange)} points`
+                              : item.pointsChange > 0
+                                ? `Score increased by ${item.pointsChange} points`
+                                : "Score updated"}
+                          </Heading>
+                          <div className="score-change">
+                            <b>{item.oldScore}</b>
+                            <Icon name="chevron" />
+                            <b>{item.newScore}</b>
+                            <em>
+                              {item.pointsChange > 0
+                                ? `+${item.pointsChange}`
+                                : item.pointsChange}
+                            </em>
+                          </div>
+                          <dl>
+                            <div>
+                              <dt>Evaluator</dt>
+                              <dd>{item.evaluator || "Steering Committee"}</dd>
+                            </div>
+                            <div>
+                              <dt>Reason</dt>
+                              <dd>{item.reason || "Performance review"}</dd>
+                            </div>
+                          </dl>
+                        </div>
+                      </article>
+                    )
+                  })
+                ) : (
+                  <article>
+                    <div className="timeline-dot">
+                      <Icon name="activity" size={15} />
+                    </div>
+                    <div className="timeline-content">
+                      <span>Current Record</span>
+                      <Heading level={4}>Score: {selected.score ?? 100} points</Heading>
+                      <p>{selected.steeringNote || selected.note || "No score reductions recorded yet."}</p>
+                    </div>
+                  </article>
+                )}
+                <article>
+                  <div className="timeline-dot light">
+                    <Icon name="check" size={15} />
                   </div>
                   <div className="timeline-content">
-                    <span>
-                      {item.createdAtIso
-                        ? new Date(item.createdAtIso).toLocaleString("en-GB", {
-                            dateStyle: "medium",
-                            timeStyle: "short",
-                          })
-                        : "Recorded"}
-                    </span>
-                    <Heading level={4}>
-                      {item.pointsChange < 0
-                        ? `Score reduced by ${Math.abs(item.pointsChange)} points`
-                        : item.pointsChange > 0
-                          ? `Score increased by ${item.pointsChange} points`
-                          : "Score updated"}
-                    </Heading>
-                    <div className="score-change">
-                      <b>{item.oldScore}</b>
-                      <Icon name="chevron" />
-                      <b>{item.newScore}</b>
-                      <em>
-                        {item.pointsChange > 0
-                          ? `+${item.pointsChange}`
-                          : item.pointsChange}
-                      </em>
-                    </div>
-                    <dl>
-                      <div>
-                        <dt>Evaluator</dt>
-                        <dd>{item.evaluator || "Steering Committee"}</dd>
-                      </div>
-                      <div>
-                        <dt>Reason</dt>
-                        <dd>{item.reason || "Performance review"}</dd>
-                      </div>
-                    </dl>
+                    <span>Camp Start</span>
+                    <Heading level={4}>Initial score created</Heading>
+                    <p>Committee member evaluation record started at 100.</p>
                   </div>
                 </article>
-              ))
-            ) : (
-              <div className="history-empty">
-                <Icon name="clock" size={24} />
-                <p>No evaluation changes recorded yet.</p>
-                <small>This member currently holds 100 base performance points.</small>
               </div>
-            )}
-          </div>
+            </>
+          ) : (
+            <div className="timeline">
+              {allHistoryList.length > 0 ? (
+                allHistoryList.map((item) => {
+                  const itemDate = item.createdAtIso
+                    ? new Date(item.createdAtIso)
+                    : item.timestamp?.toDate
+                      ? item.timestamp.toDate()
+                      : item.timestamp
+                        ? new Date(item.timestamp)
+                        : new Date()
+                  return (
+                    <article key={item.id || item.timestamp}>
+                      <div className="timeline-dot">
+                        <Icon name="activity" size={15} />
+                      </div>
+                      <div className="timeline-content">
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "4px" }}>
+                          <strong style={{ fontSize: "13px", color: "#1e293b" }}>{item.memberName}</strong>
+                          <span style={{ fontSize: "11px", color: "#64748b" }}>
+                            {itemDate.toLocaleString("en-GB", {
+                              dateStyle: "medium",
+                              timeStyle: "short",
+                            })}
+                          </span>
+                        </div>
+                        <span style={{ fontSize: "11px", color: "#475569", display: "block", marginBottom: "6px" }}>
+                          {item.position} · {item.division}
+                        </span>
+                        <Heading level={4}>
+                          {item.pointsChange < 0
+                            ? `Reduced by ${Math.abs(item.pointsChange)} pts`
+                            : item.pointsChange > 0
+                              ? `Increased by ${item.pointsChange} pts`
+                              : "Updated"}
+                        </Heading>
+                        <div className="score-change">
+                          <b>{item.oldScore}</b>
+                          <Icon name="chevron" />
+                          <b>{item.newScore}</b>
+                          <em>
+                            {item.pointsChange > 0
+                              ? `+${item.pointsChange}`
+                              : item.pointsChange}
+                          </em>
+                        </div>
+                        <dl>
+                          <div>
+                            <dt>Evaluator</dt>
+                            <dd>{item.evaluator || "Steering Committee"}</dd>
+                          </div>
+                          <div>
+                            <dt>Reason</dt>
+                            <dd>{item.reason || "Performance review"}</dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </article>
+                  )
+                })
+              ) : (
+                <article>
+                  <div className="timeline-dot light">
+                    <Icon name="check" size={15} />
+                  </div>
+                  <div className="timeline-content">
+                    <span>No Deductions Recorded</span>
+                    <Heading level={4}>All committee members at 100 points</Heading>
+                    <p>No reduction history entries exist in the system.</p>
+                  </div>
+                </article>
+              )}
+            </div>
+          )}
         </Sheet>
       )}
 

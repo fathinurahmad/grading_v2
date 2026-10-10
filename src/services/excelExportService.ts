@@ -224,7 +224,7 @@ export async function exportLecturerScoringReport() {
       avg,
       hasScores ? getGrade(avg) : "Pending",
       hasScores ? "Graded" : "Not Graded Yet",
-      s.note || "No specific note",
+      s.dosenNote || s.note || "No specific note",
     ]
   })
 
@@ -269,7 +269,7 @@ export async function exportCommitteeEvaluationReport() {
     "Remaining Discipline Score",
     "Points Lost",
     "Discipline Status",
-    "Latest Committee Note",
+    "Committee Discipline Note",
   ]
 
   const summaryRows = students.map((s, idx) => {
@@ -285,7 +285,7 @@ export async function exportCommitteeEvaluationReport() {
       score,
       reductions,
       getDisciplineStatus(score),
-      s.note || "No reductions",
+      s.panitiaNote || s.note || "No reductions",
     ]
   })
 
@@ -415,7 +415,7 @@ export async function exportCommitteeScoringReport() {
     "Base Score",
     "Final Evaluation Score",
     "Performance Level",
-    "Contribution / Evaluation Note",
+    "Steering Performance Note",
   ]
 
   const rows = committee.map((m, idx) => {
@@ -429,7 +429,7 @@ export async function exportCommitteeScoringReport() {
       100,
       score,
       getPerformanceLevel(score),
-      m.note || "Active camp contribution",
+      m.steeringNote || m.note || "Active camp contribution",
     ]
   })
 
@@ -757,7 +757,8 @@ export async function exportStudentMasterDataReport() {
     "Business",
     "English",
     "Entrepreneurship",
-    "Record Note",
+    "Committee Discipline Note",
+    "Lecturer Academic Note",
   ]
 
   const rows = students.map((s, idx) => [
@@ -771,7 +772,8 @@ export async function exportStudentMasterDataReport() {
     s.scores?.Business ?? 0,
     s.scores?.English ?? 0,
     s.scores?.Entrepreneurship ?? 0,
-    s.note || "Active",
+    s.panitiaNote || s.note || "No reductions",
+    s.dosenNote || "—",
   ])
 
   const nowStr = new Date().toLocaleString()
@@ -780,8 +782,8 @@ export async function exportStudentMasterDataReport() {
     `Student Master Profile & Directory · Generated: ${nowStr} · Total Students: ${students.length}`,
     headers,
     rows,
-    [6, 14, 34, 12, 12, 18, 24, 12, 12, 18, 28],
-    [2, 10]
+    [6, 14, 34, 12, 12, 18, 24, 12, 12, 18, 30, 30],
+    [2, 10, 11]
   )
 
   const wb = XLSX.utils.book_new()
