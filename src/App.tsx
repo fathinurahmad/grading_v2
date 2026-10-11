@@ -987,17 +987,17 @@ function ScoreStepper({
   label = "Score",
   disabled = false,
 }: {
-  value: number
+  value?: number | null
   onChange: (value: number) => void
   label?: string
   disabled?: boolean
 }) {
   const [textValue, setTextValue] = useState<string>(
-    isNaN(value) ? "" : String(value ?? 0)
+    value === undefined || value === null || isNaN(value) ? "" : String(value)
   )
 
   useEffect(() => {
-    setTextValue(isNaN(value) ? "" : String(value ?? 0))
+    setTextValue(value === undefined || value === null || isNaN(value) ? "" : String(value))
   }, [value])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -1020,7 +1020,7 @@ function ScoreStepper({
   const handleBlur = () => {
     if (disabled) return
     if (textValue === "" || isNaN(Number(textValue))) {
-      setTextValue(String(value))
+      setTextValue(value === undefined || value === null || isNaN(value) ? "" : String(value))
     } else {
       const num = Math.min(100, Math.max(0, parseInt(textValue, 10)))
       setTextValue(String(num))
@@ -1028,20 +1028,23 @@ function ScoreStepper({
     }
   }
 
+  const currentNum = value !== undefined && value !== null && !isNaN(value) ? value : 0
+
   return (
     <div className={`score-stepper ${disabled ? "opacity-50 pointer-events-none" : ""}`} aria-label={label}>
       <Button
         type="button"
         icon="minus"
         aria-label={`Reduce ${label}`}
-        disabled={disabled || value <= 0}
-        onClick={() => !disabled && onChange(Math.max(0, value - 1))}
+        disabled={disabled || (value !== undefined && value !== null && value <= 0)}
+        onClick={() => !disabled && onChange(Math.max(0, currentNum - 1))}
       />
       <input
         type="text"
         inputMode="numeric"
         pattern="[0-9]*"
         className="score-stepper-input"
+        placeholder="—"
         value={textValue}
         disabled={disabled}
         onChange={handleInputChange}
@@ -1053,8 +1056,8 @@ function ScoreStepper({
         type="button"
         icon="plus"
         aria-label={`Increase ${label}`}
-        disabled={disabled || value >= 100}
-        onClick={() => !disabled && onChange(Math.min(100, value + 1))}
+        disabled={disabled || (value !== undefined && value !== null && value >= 100)}
+        onClick={() => !disabled && onChange(Math.min(100, (value === undefined || value === null ? 0 : currentNum) + 1))}
       />
     </div>
   )
@@ -1144,12 +1147,19 @@ function DosenDashboard({ onLogout }: { onLogout: () => void }) {
   }, [])
 
   const choose = (value: string) => {
-    if (sheet === "subject") setSubject(value)
+    if (sheet === "subject") {
+      setSubject(value)
+      setScores({})
+    }
     if (sheet === "class") {
       setClassName(value)
       setGroup("")
+      setScores({})
     }
-    if (sheet === "group") setGroup(value)
+    if (sheet === "group") {
+      setGroup(value)
+      setScores({})
+    }
     setSheet(null)
   }
 
@@ -1323,10 +1333,11 @@ function DosenDashboard({ onLogout }: { onLogout: () => void }) {
                 <span>New score</span>
               </div>
               {currentStudents.map((student) => {
-                const prevScore =
+                const recordedScore =
                   subject && student.scores && subject in student.scores
                     ? student.scores[subject as keyof typeof student.scores]
-                    : 0
+                    : undefined
+                const isRecorded = recordedScore !== undefined && recordedScore !== null
                 return (
                   <div className="score-row" key={student.id}>
                     <span className="student-number">{student.id}</span>
@@ -1342,14 +1353,14 @@ function DosenDashboard({ onLogout }: { onLogout: () => void }) {
                       <small>{group}</small>
                     </span>
                     <span className="previous-score">
-                      {prevScore > 0 ? prevScore : "—"}
+                      {isRecorded ? recordedScore : "—"}
                       <small>
-                        {prevScore > 0 ? "Recorded" : "No previous score"}
+                        {isRecorded ? "Recorded" : "Not yet inputted"}
                       </small>
                     </span>
                     <ScoreStepper
                       label={`${student.name} score`}
-                      value={scores[student.id] ?? (prevScore > 0 ? prevScore : 0)}
+                      value={scores[student.id] !== undefined ? scores[student.id] : isRecorded ? recordedScore : undefined}
                       disabled={locked}
                       onChange={(value) =>
                         !locked && setScores({ ...scores, [student.id]: value })
@@ -1488,7 +1499,10 @@ function DosenDashboard({ onLogout }: { onLogout: () => void }) {
           </div>
           <Heading>All set!</Heading>
           <p>Scores have been successfully recorded for {updated} students.</p>
-          <Button className="primary full" onClick={() => setSheet(null)}>
+          <Button className="primary full" onClick={() => {
+            setScores({})
+            setSheet(null)
+          }}>
             Done
           </Button>
         </Sheet>
@@ -3738,7 +3752,21 @@ function AdminDashboard({ onLogout }: { onLogout: () => void }) {
             </span>
             <span>
               <strong>Manage Students</strong>
-              <small>Add, review, and update master data</small>
+              <small>Review, update, and edit master data</small>
+            </span>
+            <Icon name="chevron" />
+          </Button>
+          <Button
+            className="admin-quick-card"
+            style={{ borderLeft: "4px solid #10b981" }}
+            onClick={openAddStudent}
+          >
+            <span className="admin-icon green" style={{ background: "#ecfdf5", color: "#059669" }}>
+              <Icon name="plus" />
+            </span>
+            <span>
+              <strong>Add Student</strong>
+              <small>Quickly register a new student</small>
             </span>
             <Icon name="chevron" />
           </Button>
@@ -3813,23 +3841,33 @@ function AdminDashboard({ onLogout }: { onLogout: () => void }) {
       {sheet === "students" && (
         <Sheet title="Manage Student Data" onClose={() => setSheet(null)}>
           <div style={{ marginBottom: "12px" }}>
-            <label className="search-box student-search" style={{ marginBottom: "8px" }}>
-              <Icon name="search" />
-              <input
-                placeholder="Search student by name or ID..."
-                value={studentSearch}
-                onChange={(e) => setStudentSearch(e.target.value)}
-              />
-              {studentSearch && (
-                <button
-                  type="button"
-                  onClick={() => setStudentSearch("")}
-                  style={{ background: "none", border: "none", cursor: "pointer", color: "#94a3b8", fontSize: "14px" }}
-                >
-                  ×
-                </button>
-              )}
-            </label>
+            <div style={{ display: "flex", gap: "8px", marginBottom: "8px", alignItems: "center" }}>
+              <label className="search-box student-search" style={{ flex: 1, margin: 0 }}>
+                <Icon name="search" />
+                <input
+                  placeholder="Search student by name or ID..."
+                  value={studentSearch}
+                  onChange={(e) => setStudentSearch(e.target.value)}
+                />
+                {studentSearch && (
+                  <button
+                    type="button"
+                    onClick={() => setStudentSearch("")}
+                    style={{ background: "none", border: "none", cursor: "pointer", color: "#94a3b8", fontSize: "14px" }}
+                  >
+                    ×
+                  </button>
+                )}
+              </label>
+              <Button
+                className="primary"
+                icon="plus"
+                style={{ padding: "8px 12px", fontSize: "12px", whiteSpace: "nowrap", flexShrink: 0 }}
+                onClick={openAddStudent}
+              >
+                Add Student
+              </Button>
+            </div>
 
             <div style={{ display: "flex", gap: "6px", overflowX: "auto", paddingBottom: "4px" }}>
               {["All Classes", ...availableAdminClasses].map((cls) => (

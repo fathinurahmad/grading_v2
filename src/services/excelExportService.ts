@@ -214,9 +214,9 @@ export async function exportLecturerScoringReport() {
     const avg = total > 0 ? Math.round((total / 3) * 10) / 10 : 0
     const hasScores = b > 0 || e > 0 || ent > 0
 
-    const noteBus = s.subjectNotes?.Business || (s.dosenNote && b > 0 ? s.dosenNote : "—")
-    const noteEng = s.subjectNotes?.English || (s.dosenNote && e > 0 ? s.dosenNote : "—")
-    const noteEnt = s.subjectNotes?.Entrepreneurship || (s.dosenNote && ent > 0 ? s.dosenNote : "—")
+    const noteBus = s.subjectNotes?.Business || (s.dosenNote && b > 0 && !s.subjectNotes?.English && !s.subjectNotes?.Entrepreneurship ? s.dosenNote : "—")
+    const noteEng = s.subjectNotes?.English || (s.dosenNote && e > 0 && !s.subjectNotes?.Business && !s.subjectNotes?.Entrepreneurship ? s.dosenNote : "—")
+    const noteEnt = s.subjectNotes?.Entrepreneurship || (s.dosenNote && ent > 0 && !s.subjectNotes?.Business && !s.subjectNotes?.English ? s.dosenNote : "—")
 
     return [
       idx + 1,
@@ -224,13 +224,13 @@ export async function exportLecturerScoringReport() {
       s.name,
       s.class,
       s.group,
-      b,
-      noteBus,
-      e,
-      noteEng,
-      ent,
-      noteEnt,
-      avg,
+      b > 0 ? b : s.scores && "Business" in s.scores ? 0 : "—",
+      noteBus || "—",
+      e > 0 ? e : s.scores && "English" in s.scores ? 0 : "—",
+      noteEng || "—",
+      ent > 0 ? ent : s.scores && "Entrepreneurship" in s.scores ? 0 : "—",
+      noteEnt || "—",
+      avg > 0 ? avg : hasScores ? 0 : "—",
       hasScores ? getGrade(avg) : "Pending",
       hasScores ? "Graded" : "Not Graded Yet",
     ]
@@ -775,9 +775,9 @@ export async function exportStudentMasterDataReport() {
     const b = s.scores?.Business ?? 0
     const e = s.scores?.English ?? 0
     const ent = s.scores?.Entrepreneurship ?? 0
-    const noteBus = s.subjectNotes?.Business || (s.dosenNote && b > 0 ? s.dosenNote : "—")
-    const noteEng = s.subjectNotes?.English || (s.dosenNote && e > 0 ? s.dosenNote : "—")
-    const noteEnt = s.subjectNotes?.Entrepreneurship || (s.dosenNote && ent > 0 ? s.dosenNote : "—")
+    const noteBus = s.subjectNotes?.Business || (s.dosenNote && b > 0 && !s.subjectNotes?.English && !s.subjectNotes?.Entrepreneurship ? s.dosenNote : "—")
+    const noteEng = s.subjectNotes?.English || (s.dosenNote && e > 0 && !s.subjectNotes?.Business && !s.subjectNotes?.Entrepreneurship ? s.dosenNote : "—")
+    const noteEnt = s.subjectNotes?.Entrepreneurship || (s.dosenNote && ent > 0 && !s.subjectNotes?.Business && !s.subjectNotes?.English ? s.dosenNote : "—")
 
     return [
       idx + 1,
@@ -787,12 +787,12 @@ export async function exportStudentMasterDataReport() {
       s.group,
       s.score ?? 100,
       getDisciplineStatus(s.score ?? 100),
-      b,
-      noteBus,
-      e,
-      noteEng,
-      ent,
-      noteEnt,
+      b > 0 ? b : s.scores && "Business" in s.scores ? 0 : "—",
+      noteBus || "—",
+      e > 0 ? e : s.scores && "English" in s.scores ? 0 : "—",
+      noteEng || "—",
+      ent > 0 ? ent : s.scores && "Entrepreneurship" in s.scores ? 0 : "—",
+      noteEnt || "—",
       s.panitiaNote || s.note || "No reductions",
     ]
   })
