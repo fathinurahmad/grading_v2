@@ -14,8 +14,9 @@ import {
   serverTimestamp,
   writeBatch,
 } from "firebase/firestore"
-import { signInWithEmailAndPassword } from "firebase/auth"
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth"
 import { db, auth } from "../firebase"
+import { LECTURER_ACCOUNTS } from "../data/lecturerAccounts"
 
 export interface FirebaseStudent {
   id: string
@@ -820,12 +821,30 @@ export function getRoleFromEmail(email: string): "dosen" | "panitia" | "scoring"
   if (clean === "dosen.kampus@gmail.com" || clean.startsWith("dosen.")) return "dosen"
   if (clean === "panitia.kampus@gmail.com" || clean.startsWith("panitia.")) return "panitia"
   if (clean === "steering.kampus@gmail.com" || clean.startsWith("steering.") || clean.startsWith("scoring.")) return "scoring"
+  // Check if matches any official lecturer UNM accounts
+  if (LECTURER_ACCOUNTS.some((acc) => acc.email.toLowerCase() === clean)) {
+    return "dosen"
+  }
   return null
 }
 
 export function getUserProfileFromEmail(email: string): AppUser | null {
-  const role = getRoleFromEmail(email)
+  const clean = (email || "").toLowerCase().trim()
+  const role = getRoleFromEmail(clean)
   if (!role) return null
+
+  // If this email is one of the UNM lecturers
+  const lecturer = LECTURER_ACCOUNTS.find((acc) => acc.email.toLowerCase() === clean)
+  if (lecturer) {
+    return {
+      userId: lecturer.username,
+      username: lecturer.username,
+      email: lecturer.email,
+      role: "dosen",
+      name: "User",
+      roleTitle: "Academic Lecturer",
+    }
+  }
 
   switch (role) {
     case "admin":
@@ -876,6 +895,42 @@ export async function authenticateUserWithFirebase(
 
   if (!cleanId || !cleanPass) return null
 
+  // 1. Direct check against official UNM Lecturer accounts
+  const lecturerMatch = LECTURER_ACCOUNTS.find(
+    (acc) =>
+      (acc.email.toLowerCase() === cleanId ||
+        acc.username.toLowerCase() === cleanId ||
+        (cleanId.endsWith("@unm.ac.id") && acc.email.toLowerCase().startsWith(cleanId.replace(/@unm\.ac\.id$/, "")))) &&
+      acc.password === cleanPass
+  )
+
+  if (lecturerMatch) {
+    try {
+      await signInWithEmailAndPassword(auth, lecturerMatch.email, lecturerMatch.password)
+    } catch (signInErr: any) {
+      if (
+        signInErr?.code === "auth/user-not-found" ||
+        signInErr?.code === "auth/invalid-credential" ||
+        signInErr?.code === "auth/invalid-login-credentials"
+      ) {
+        try {
+          await createUserWithEmailAndPassword(auth, lecturerMatch.email, lecturerMatch.password)
+        } catch (createErr) {
+          console.warn("Firebase Auth auto-register for lecturer fallback:", createErr)
+        }
+      }
+    }
+
+    return {
+      userId: lecturerMatch.username,
+      username: lecturerMatch.username,
+      email: lecturerMatch.email,
+      role: "dosen",
+      name: "User",
+      roleTitle: "Academic Lecturer",
+    }
+  }
+
   // Map aliases to registered Firebase Auth emails
   const emailAliases: Record<string, string> = {
     dosen: "dosen.kampus@gmail.com",
@@ -888,7 +943,7 @@ export async function authenticateUserWithFirebase(
   const emailToTry = emailAliases[cleanId] || cleanId
   if (!emailToTry.includes("@")) return null
 
-  // 1. Strict Google Firebase Authentication (Encrypted over TLS, salted hashing)
+  // 2. Strict Google Firebase Authentication (Encrypted over TLS, salted hashing)
   try {
     const userCredential = await signInWithEmailAndPassword(auth, emailToTry, cleanPass)
     if (userCredential && userCredential.user && userCredential.user.email) {

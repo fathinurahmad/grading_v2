@@ -4260,11 +4260,17 @@ export default function App() {
           handleLogout()
         }
       } else {
-        // If not authenticated in Firebase Auth
+        // If not authenticated in Firebase Auth, check if active local session exists
         try {
-          localStorage.removeItem("campus_user_role")
-        } catch (_) {}
-        setRole(null)
+          const savedRole = localStorage.getItem("campus_user_role")
+          if (savedRole && ["dosen", "panitia", "scoring", "admin"].includes(savedRole)) {
+            setRole(savedRole as Role)
+          } else {
+            setRole(null)
+          }
+        } catch (_) {
+          setRole(null)
+        }
       }
     })
     return () => unsub()
