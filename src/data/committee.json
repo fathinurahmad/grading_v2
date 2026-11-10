@@ -294,5 +294,29 @@
     "position": "MEMBER",
     "score": 100,
     "note": "No reductions"
+  },
+  {
+    "id": "PAN-38",
+    "name": "IRHAM SINFANI",
+    "division": "BPH",
+    "position": "KETUA PANITIA",
+    "score": 100,
+    "note": "No reductions"
+  },
+  {
+    "id": "PAN-39",
+    "name": "NUR SYAHWA RAMADHANI",
+    "division": "BPH",
+    "position": "SEKRETARIS PANITIA",
+    "score": 100,
+    "note": "No reductions"
+  },
+  {
+    "id": "PAN-40",
+    "name": "NURUL IZZAH MAHARANI S. BAODY",
+    "division": "BPH",
+    "position": "BENDAHARA",
+    "score": 100,
+    "note": "No reductions"
   }
 ]

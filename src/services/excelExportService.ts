@@ -489,7 +489,7 @@ export async function exportCommitteeScoringReport() {
           100,
           100,
           0,
-          "All 37 committee members initialized with 100 base performance points",
+          "All committee members initialized with 100 base performance points",
           "Steering Committee",
         ],
       ]

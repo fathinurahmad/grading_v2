@@ -2297,14 +2297,15 @@ function ScoringPanitiaDashboard({ onLogout }: { onLogout: () => void }) {
     return () => unsub()
   }, [])
 
-  const divisions = [
-    "All Divisions",
-    "EVENT",
-    "PUBLIC & DOCUMENTATION",
-    "CONSUMPTION",
-    "FIELD",
-    "EQUIPMENT",
-  ]
+  const divisions = useMemo(() => {
+    const list = Array.from(new Set(committeeList.map((m) => m.division))).filter(Boolean)
+    list.sort((a, b) => {
+      if (a === "BPH") return -1
+      if (b === "BPH") return 1
+      return a.localeCompare(b)
+    })
+    return ["All Divisions", ...list]
+  }, [committeeList])
 
   const filteredCommittee = useMemo(
     () =>
@@ -3662,7 +3663,7 @@ function AdminDashboard({ onLogout }: { onLogout: () => void }) {
     },
     {
       name: "Steering Committee Performance",
-      note: "All 37 committee members evaluated across 5 divisions",
+      note: "All committee members evaluated across all divisions",
       tone: "green",
     },
     {
@@ -4213,7 +4214,7 @@ function AdminDashboard({ onLogout }: { onLogout: () => void }) {
             </div>
             <strong style={{ fontSize: "16px", display: "block", marginBottom: "6px" }}>All Data Has Been Reset</strong>
             <p style={{ fontSize: "13px", color: "#64748b", margin: 0 }}>
-              All 232 students and 37 committee members have been restored to a base score of 100 with zero penalties. All reduction logs have been cleared.
+              All students and committee members have been restored to a base score of 100 with zero penalties. All reduction logs have been cleared.
             </p>
           </div>
           <Button
