@@ -68,8 +68,6 @@ export function subscribeStudents(
       studentsCol,
       (snapshot) => {
         if (snapshot.empty) {
-          // If Firestore is empty, auto-seed with fallback data
-          seedInitialStudents(fallbackStudents).catch(console.error)
           onUpdate(fallbackStudents)
         } else {
           const list: FirebaseStudent[] = []
