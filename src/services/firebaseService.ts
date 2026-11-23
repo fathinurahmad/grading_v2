@@ -195,17 +195,13 @@ export async function submitLecturerScoresInFirestore(
       for (const [studentId, newScore] of chunk) {
         const studentRef = doc(db, "students", studentId)
         const updatePayload: Record<string, any> = {
-          scores: {
-            [subject]: newScore,
-          },
+          [`scores.${subject}`]: newScore,
         }
         if (note !== undefined) {
           updatePayload.dosenNote = note
-          updatePayload.subjectNotes = {
-            [subject]: note,
-          }
+          updatePayload[`subjectNotes.${subject}`] = note
         }
-        batch.set(studentRef, updatePayload, { merge: true })
+        batch.update(studentRef, updatePayload)
       }
       await batch.commit()
     }

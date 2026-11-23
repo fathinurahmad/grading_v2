@@ -211,7 +211,8 @@ export async function exportLecturerScoringReport() {
     const e = Number(s.scores?.English ?? 0)
     const ent = Number(s.scores?.Entrepreneurship ?? 0)
     const total = b + e + ent
-    const avg = total > 0 ? Math.round((total / 3) * 10) / 10 : 0
+    const gradedCount = [b, e, ent].filter((x) => x > 0).length || 1
+    const avg = total > 0 ? Math.round((total / gradedCount) * 10) / 10 : 0
     const hasScores = b > 0 || e > 0 || ent > 0
 
     const noteBus = s.subjectNotes?.Business || (s.dosenNote && b > 0 && !s.subjectNotes?.English && !s.subjectNotes?.Entrepreneurship ? s.dosenNote : "—")
